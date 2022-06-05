@@ -140,7 +140,7 @@ internal class ExtractorTest {
         assertEquals(expectedStatusCode ,actualStatusCode)
     }
 
-    @Test
+    /*@Test
     fun shouldBeAbleToExtractBodyFromInputStream() {
         val expectedMetaData =
             """[{"fieldName":"Export","type":"Alphabets","length":"1","dependentOn":"","dependentValue":"","values":["Y","N"]},{"fieldName":"Country Name","type":"Alphabets","length":"4","dependentOn":"Export","dependentValue":"N","values":["Export,Country Name","Y,","N,USA",""]}]"""
@@ -151,7 +151,7 @@ internal class ExtractorTest {
         val actualMetaData = extractor.extractBody(bodySize , inputStream)
 
         assertEquals(expectedMetaData , actualMetaData)
-    }
+    }*/
 
     @Test
     fun shouldBeAbleToExtractConfigName() {

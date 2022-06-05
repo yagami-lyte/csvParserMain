@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-03T06:27:21" hostname="Utkashs-MacBook-Pro.local" time="0.019">
+<testsuite name="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-06-05T16:08:31" hostname="Utkashs-MacBook-Pro.local" time="0.0">
   <properties/>
-  <testcase name="shouldBeAbleToGetResponseForConfigPOSTRequest()" classname="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" time="0.019"/>
-  <system-out><![CDATA[11:57:21.344 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Socket name=#7
-11:57:21.345 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for OutputStream name=child of #7#8
-11:57:21.346 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for InputStream name=child of #7#9
-11:57:21.347 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering java.io.ByteArrayInputStream@4cb4c4cc on Socket(#7).getInputStream()
-]]></system-out>
+  <testcase name="shouldBeAbleToGetResponseForConfigPOSTRequest()" classname="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

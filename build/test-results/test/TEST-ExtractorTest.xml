@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ExtractorTest" tests="13" skipped="0" failures="0" errors="0" timestamp="2022-06-03T06:27:16" hostname="Utkashs-MacBook-Pro.local" time="3.003">
+<testsuite name="ExtractorTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-06-05T16:08:30" hostname="Utkashs-MacBook-Pro.local" time="0.133">
   <properties/>
-  <testcase name="shouldBeAbleToReturn200StatusCodeForValidRequest()" classname="ExtractorTest" time="0.013"/>
-  <testcase name="shouldBeAbleToExtractTheFileContentForIndexHTML()" classname="ExtractorTest" time="0.02"/>
-  <testcase name="shouldBeAbleToExtractBodyFromInputStream()" classname="ExtractorTest" time="2.861"/>
-  <testcase name="shouldBeAbleToExtractTheContentLength()" classname="ExtractorTest" time="0.016"/>
-  <testcase name="shouldBeAbleToReturn400StatusCodeForInValidRequest()" classname="ExtractorTest" time="0.002"/>
-  <testcase name="shouldBeAbleToExtractTheFileContentForMainCss()" classname="ExtractorTest" time="0.044"/>
-  <testcase name="shouldBeAbleToExtractThePathForAGetRequest()" classname="ExtractorTest" time="0.001"/>
-  <testcase name="shouldBeAbleToExtractThePathForAPostRequest()" classname="ExtractorTest" time="0.0"/>
-  <testcase name="shouldBeAbleToExtractConfigName()" classname="ExtractorTest" time="0.001"/>
-  <testcase name="shouldReturn404PageErrorForInvalidJavascriptFileGetRequest()" classname="ExtractorTest" time="0.001"/>
+  <testcase name="shouldBeAbleToReturn200StatusCodeForValidRequest()" classname="ExtractorTest" time="0.002"/>
+  <testcase name="shouldBeAbleToExtractTheFileContentForIndexHTML()" classname="ExtractorTest" time="0.035"/>
+  <testcase name="shouldBeAbleToExtractTheContentLength()" classname="ExtractorTest" time="0.015"/>
+  <testcase name="shouldBeAbleToReturn400StatusCodeForInValidRequest()" classname="ExtractorTest" time="0.001"/>
+  <testcase name="shouldBeAbleToExtractTheFileContentForMainCss()" classname="ExtractorTest" time="0.039"/>
+  <testcase name="shouldBeAbleToExtractThePathForAGetRequest()" classname="ExtractorTest" time="0.002"/>
+  <testcase name="shouldBeAbleToExtractThePathForAPostRequest()" classname="ExtractorTest" time="0.003"/>
+  <testcase name="shouldBeAbleToExtractConfigName()" classname="ExtractorTest" time="0.002"/>
+  <testcase name="shouldReturn404PageErrorForInvalidJavascriptFileGetRequest()" classname="ExtractorTest" time="0.004"/>
   <testcase name="shouldBeAbleToReturn400StatusCodeForInValidJSRequest()" classname="ExtractorTest" time="0.001"/>
-  <testcase name="shouldBeAbleToReturn200StatusCodeForValidCSSRequest()" classname="ExtractorTest" time="0.001"/>
-  <testcase name="shouldBeAbleToExtractTheFileContentForMainJs()" classname="ExtractorTest" time="0.023"/>
+  <testcase name="shouldBeAbleToReturn200StatusCodeForValidCSSRequest()" classname="ExtractorTest" time="0.0"/>
+  <testcase name="shouldBeAbleToExtractTheFileContentForMainJs()" classname="ExtractorTest" time="0.013"/>
   <system-out><![CDATA[<!DOCTYPE html>
 <html lang="en" xmlns:border="http://www.w3.org/1999/xhtml">
 
@@ -171,10 +170,6 @@
 
 </html>
 
-11:57:17.390 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for Socket name=#1
-11:57:19.516 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for OutputStream name=child of #1#2
-11:57:19.704 [Test worker] DEBUG io.mockk.impl.instantiation.AbstractMockFactory - Creating mockk for InputStream name=child of #1#3
-11:57:19.709 [Test worker] DEBUG io.mockk.impl.recording.states.AnsweringState - Answering java.io.ByteArrayInputStream@3fe512d2 on Socket(#1).getInputStream()
 html {
     scroll-behavior: smooth;
 }

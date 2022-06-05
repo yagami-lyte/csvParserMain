@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.PrependingZeroesValidationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-06-03T06:27:21" hostname="Utkashs-MacBook-Pro.local" time="0.089">
+<testsuite name="validation.PrependingZeroesValidationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-06-05T16:08:31" hostname="Utkashs-MacBook-Pro.local" time="0.134">
   <properties/>
-  <testcase name="shouldPerformPrependingZeroesCheckWithNoErrors()" classname="validation.PrependingZeroesValidationTest" time="0.028"/>
+  <testcase name="shouldPerformPrependingZeroesCheckWithNoErrors()" classname="validation.PrependingZeroesValidationTest" time="0.069"/>
   <testcase name="shouldFalseTrueIfValueDoesNotHavePrependingZeroes()" classname="validation.PrependingZeroesValidationTest" time="0.001"/>
-  <testcase name="shouldReturnTrueForPrependingZeroesValues()" classname="validation.PrependingZeroesValidationTest" time="0.001"/>
-  <testcase name="shouldPerformPrependingZeroesCheckWithMultipleErrors()" classname="validation.PrependingZeroesValidationTest" time="0.028"/>
-  <testcase name="shouldPerformPrependingZeroesCheck()" classname="validation.PrependingZeroesValidationTest" time="0.029"/>
+  <testcase name="shouldReturnTrueForPrependingZeroesValues()" classname="validation.PrependingZeroesValidationTest" time="0.0"/>
+  <testcase name="shouldPerformPrependingZeroesCheckWithMultipleErrors()" classname="validation.PrependingZeroesValidationTest" time="0.021"/>
+  <testcase name="shouldPerformPrependingZeroesCheck()" classname="validation.PrependingZeroesValidationTest" time="0.038"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

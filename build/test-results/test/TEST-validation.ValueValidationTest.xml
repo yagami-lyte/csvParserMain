@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.ValueValidationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-06-03T06:27:21" hostname="Utkashs-MacBook-Pro.local" time="0.043">
+<testsuite name="validation.ValueValidationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-06-05T16:08:32" hostname="Utkashs-MacBook-Pro.local" time="0.084">
   <properties/>
-  <testcase name="shouldReturnTrueIfValueIsPresent()" classname="validation.ValueValidationTest" time="0.001"/>
-  <testcase name="shouldReturnFalseIfValueIsNotPresent()" classname="validation.ValueValidationTest" time="0.0"/>
-  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.ValueValidationTest" time="0.016"/>
-  <testcase name="shouldPerformLengthValidationCheck()" classname="validation.ValueValidationTest" time="0.012"/>
-  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.ValueValidationTest" time="0.012"/>
+  <testcase name="shouldReturnTrueIfValueIsPresent()" classname="validation.ValueValidationTest" time="0.0"/>
+  <testcase name="shouldReturnFalseIfValueIsNotPresent()" classname="validation.ValueValidationTest" time="0.001"/>
+  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.ValueValidationTest" time="0.033"/>
+  <testcase name="shouldPerformLengthValidationCheck()" classname="validation.ValueValidationTest" time="0.015"/>
+  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.ValueValidationTest" time="0.033"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

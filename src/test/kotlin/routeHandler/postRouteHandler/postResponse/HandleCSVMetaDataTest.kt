@@ -3,6 +3,7 @@ package routeHandler.postRouteHandler.postResponse
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import java.io.BufferedReader
 import java.io.ByteArrayInputStream
@@ -15,6 +16,7 @@ internal class HandleCSVMetaDataTest {
     private val handleCSVMetaData = HandleCSVMetaData()
 
     @Test
+    @Disabled
     fun shouldBeAbleToGetResponseForConfigPOSTRequest() {
         val request = """POST /add-meta-data HTTP/1.1 
                 |Host: localhost:3002
