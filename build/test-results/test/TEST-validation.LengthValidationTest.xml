@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.LengthValidationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:46:22" hostname="Utkashs-MacBook-Pro.local" time="0.003">
+<testsuite name="validation.LengthValidationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:48:42" hostname="Utkashs-MacBook-Pro.local" time="0.004">
   <properties/>
-  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.LengthValidationTest" time="0.001"/>
+  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.LengthValidationTest" time="0.002"/>
   <testcase name="shouldPerformLengthValidationCheck()" classname="validation.LengthValidationTest" time="0.001"/>
-  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.LengthValidationTest" time="0.001"/>
+  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.LengthValidationTest" time="0.0"/>
   <system-out><![CDATA[{Export=[2, 3, 4]}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
