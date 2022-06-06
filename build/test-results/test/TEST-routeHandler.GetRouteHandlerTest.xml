@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="routeHandler.GetRouteHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-05T16:08:31" hostname="Utkashs-MacBook-Pro.local" time="0.049">
+<testsuite name="routeHandler.GetRouteHandlerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-06T04:10:29" hostname="Utkashs-MacBook-Pro.local" time="0.421">
   <properties/>
-  <testcase name="shouldBeAbleToGetResponseIfPathNotExist()" classname="routeHandler.GetRouteHandlerTest" time="0.049"/>
+  <testcase name="shouldBeAbleToGetResponseIfPathNotExist()" classname="routeHandler.GetRouteHandlerTest" time="0.421"/>
   <system-out><![CDATA[HTTP/1.1 404 NOT FOUND
 Content-Type: text/html; charset=utf-8
 Content-Length: 164
