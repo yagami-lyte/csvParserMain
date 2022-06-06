@@ -20,25 +20,25 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">155</div>
+<div class="counter">3</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">3</div>
 <p>failures</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">6</div>
+<div class="counter">0</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">2.206s</div>
+<div class="counter">0.027s</div>
 <p>duration</p>
 </div>
 </td>
@@ -47,8 +47,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox skipped" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
 <p>successful</p>
 </div>
 </td>
@@ -58,7 +58,7 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Ignored tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
 <a href="#tab1">Packages</a>
@@ -68,31 +68,19 @@
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Ignored tests</h2>
+<h2>Failed tests</h2>
 <ul class="linkList">
 <li>
-<a href="classes/routeHandler.getRouteHandler.getResponse.ConfigNamesTest.html">ConfigNamesTest</a>.
-<a href="classes/routeHandler.getRouteHandler.getResponse.ConfigNamesTest.html#shouldBeAbleToGetConfigurationNamesForConfigNameGetRequest()">shouldBeAbleToGetConfigurationNamesForConfigNameGetRequest()</a>
+<a href="classes/validation.TypeValidationTest.html">TypeValidationTest</a>.
+<a href="classes/validation.TypeValidationTest.html#shouldPerformTypeValidationCheck()">shouldPerformTypeValidationCheck()</a>
 </li>
 <li>
-<a href="classes/routeHandler.getRouteHandler.getResponse.ConfigNamesTest.html">ConfigNamesTest</a>.
-<a href="classes/routeHandler.getRouteHandler.getResponse.ConfigNamesTest.html#shouldBeAbleToGetMultipleConfigurationNamesForConfigNameGetRequest()">shouldBeAbleToGetMultipleConfigurationNamesForConfigNameGetRequest()</a>
+<a href="classes/validation.TypeValidationTest.html">TypeValidationTest</a>.
+<a href="classes/validation.TypeValidationTest.html#shouldReturnJsonArrayWithMultipleErrors()">shouldReturnJsonArrayWithMultipleErrors()</a>
 </li>
 <li>
-<a href="classes/routeHandler.getRouteHandler.getResponse.ConfigNamesTest.html">ConfigNamesTest</a>.
-<a href="classes/routeHandler.getRouteHandler.getResponse.ConfigNamesTest.html#shouldBeAbleToGetZeroConfigurationNamesForConfigNameGetRequest()">shouldBeAbleToGetZeroConfigurationNamesForConfigNameGetRequest()</a>
-</li>
-<li>
-<a href="classes/routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest.html">HandleCSVMetaDataTest</a>.
-<a href="classes/routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest.html#shouldBeAbleToGetResponseForConfigPOSTRequest()">shouldBeAbleToGetResponseForConfigPOSTRequest()</a>
-</li>
-<li>
-<a href="classes/server.ServerIntegrationTest.html">ServerIntegrationTest</a>.
-<a href="classes/server.ServerIntegrationTest.html#shouldReturn200ResponseForGetRequest()">shouldReturn200ResponseForGetRequest()</a>
-</li>
-<li>
-<a href="classes/server.ServerIntegrationTest.html">ServerIntegrationTest</a>.
-<a href="classes/server.ServerIntegrationTest.html#shouldReturnPageNotFoundResponse()">shouldReturnPageNotFoundResponse()</a>
+<a href="classes/validation.TypeValidationTest.html">TypeValidationTest</a>.
+<a href="classes/validation.TypeValidationTest.html#shouldReturnJsonArrayWithNoErrors()">shouldReturnJsonArrayWithNoErrors()</a>
 </li>
 </ul>
 </div>
@@ -111,74 +99,14 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
-<a href="packages/default-package.html">default-package</a>
-</td>
-<td>106</td>
-<td>0</td>
-<td>0</td>
-<td>0.467s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/database.html">database</a>
-</td>
-<td>8</td>
-<td>0</td>
-<td>0</td>
-<td>0.660s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/routeHandler.html">routeHandler</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.507s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="skipped">
-<a href="packages/routeHandler.getRouteHandler.getResponse.html">routeHandler.getRouteHandler.getResponse</a>
-</td>
-<td>6</td>
-<td>0</td>
-<td>3</td>
-<td>0.005s</td>
-<td class="skipped">100%</td>
-</tr>
-<tr>
-<td class="skipped">
-<a href="packages/routeHandler.postRouteHandler.postResponse.html">routeHandler.postRouteHandler.postResponse</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>1</td>
-<td>0.002s</td>
-<td class="skipped">100%</td>
-</tr>
-<tr>
-<td class="skipped">
-<a href="packages/server.html">server</a>
-</td>
-<td>4</td>
-<td>0</td>
-<td>2</td>
-<td>0.056s</td>
-<td class="skipped">100%</td>
-</tr>
-<tr>
-<td class="success">
+<td class="failures">
 <a href="packages/validation.html">validation</a>
 </td>
-<td>27</td>
+<td>3</td>
+<td>3</td>
 <td>0</td>
-<td>0</td>
-<td>0.509s</td>
-<td class="success">100%</td>
+<td>0.027s</td>
+<td class="failures">0%</td>
 </tr>
 </tbody>
 </table>
@@ -198,184 +126,14 @@
 </thead>
 <tbody>
 <tr>
-<td class="success">
-<a href="classes/ExtractorTest.html">ExtractorTest</a>
-</td>
-<td>12</td>
-<td>0</td>
-<td>0</td>
-<td>0.115s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/TypeEnumTest.html">TypeEnumTest</a>
-</td>
-<td>94</td>
-<td>0</td>
-<td>0</td>
-<td>0.352s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/database.DatabaseOperationsTest.html">database.DatabaseOperationsTest</a>
-</td>
-<td>8</td>
-<td>0</td>
-<td>0</td>
-<td>0.660s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/routeHandler.GetRouteHandlerTest.html">routeHandler.GetRouteHandlerTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.506s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/routeHandler.ResponseHeaderTest.html">routeHandler.ResponseHeaderTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.001s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="skipped">
-<a href="classes/routeHandler.getRouteHandler.getResponse.ConfigNamesTest.html">routeHandler.getRouteHandler.getResponse.ConfigNamesTest</a>
-</td>
-<td>3</td>
-<td>0</td>
-<td>3</td>
-<td>0.001s</td>
-<td class="skipped">-</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/routeHandler.getRouteHandler.getResponse.ErrorPageTest.html">routeHandler.getRouteHandler.getResponse.ErrorPageTest</a>
-</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.004s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="skipped">
-<a href="classes/routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest.html">routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0.001s</td>
-<td class="skipped">-</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/routeHandler.postRouteHandler.postResponse.PageNotFoundResponseTest.html">routeHandler.postRouteHandler.postResponse.PageNotFoundResponseTest</a>
-</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.001s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="skipped">
-<a href="classes/server.ServerIntegrationTest.html">server.ServerIntegrationTest</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>2</td>
-<td>0s</td>
-<td class="skipped">-</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/server.ServerTest.html">server.ServerTest</a>
-</td>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>0.056s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/validation.DependencyValidationTest.html">validation.DependencyValidationTest</a>
-</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.077s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/validation.DuplicateTest.html">validation.DuplicateTest</a>
-</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0.119s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/validation.LengthValidationTest.html">validation.LengthValidationTest</a>
-</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.075s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/validation.NullValidationTest.html">validation.NullValidationTest</a>
-</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>0.079s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/validation.PrependingZeroesValidationTest.html">validation.PrependingZeroesValidationTest</a>
-</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
-<td>0.049s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
+<td class="failures">
 <a href="classes/validation.TypeValidationTest.html">validation.TypeValidationTest</a>
 </td>
 <td>3</td>
+<td>3</td>
 <td>0</td>
-<td>0</td>
-<td>0.066s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="classes/validation.ValueValidationTest.html">validation.ValueValidationTest</a>
-</td>
-<td>5</td>
-<td>0</td>
-<td>0</td>
-<td>0.044s</td>
-<td class="success">100%</td>
+<td>0.027s</td>
+<td class="failures">0%</td>
 </tr>
 </tbody>
 </table>
@@ -388,7 +146,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 6 Jun 2022, 14:34:38</p>
+<a href="http://www.gradle.org">Gradle 7.2</a> at 6 Jun 2022, 16:56:47</p>
 </div>
 </div>
 </body>
