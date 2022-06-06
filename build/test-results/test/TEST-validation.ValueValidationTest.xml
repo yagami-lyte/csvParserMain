@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.ValueValidationTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2022-06-06T12:24:23" hostname="Utkashs-MacBook-Pro.local" time="47.727">
+<testsuite name="validation.ValueValidationTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2022-06-06T12:32:02" hostname="Utkashs-MacBook-Pro.local" time="5.301">
   <properties/>
   <testcase name="shouldReturnTrueIfValueIsPresent()" classname="validation.ValueValidationTest" time="0.0"/>
-  <testcase name="shouldReturnFalseIfValueIsNotPresent()" classname="validation.ValueValidationTest" time="0.0"/>
-  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.ValueValidationTest" time="1.466">
+  <testcase name="shouldReturnFalseIfValueIsNotPresent()" classname="validation.ValueValidationTest" time="0.001"/>
+  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.ValueValidationTest" time="1.123">
     <failure message="org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
@@ -105,8 +105,8 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="shouldPerformLengthValidationCheck()" classname="validation.ValueValidationTest" time="43.658"/>
-  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.ValueValidationTest" time="2.602"/>
+  <testcase name="shouldPerformLengthValidationCheck()" classname="validation.ValueValidationTest" time="2.116"/>
+  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.ValueValidationTest" time="2.06"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
