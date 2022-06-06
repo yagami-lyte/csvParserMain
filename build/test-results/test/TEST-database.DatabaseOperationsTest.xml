@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="database.DatabaseOperationsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:48:41" hostname="Utkashs-MacBook-Pro.local" time="0.477">
+<testsuite name="database.DatabaseOperationsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2022-06-06T08:29:06" hostname="Utkashs-MacBook-Pro.local" time="0.513">
   <properties/>
-  <testcase name="shouldBeAbleToGetConfigNamesFromTheDatabase()" classname="database.DatabaseOperationsTest" time="0.319"/>
-  <testcase name="shouldBeAbleToReadConfigDataFromDatabase()" classname="database.DatabaseOperationsTest" time="0.073"/>
-  <testcase name="shouldBeAbleToReturnTrueIfConfigNameIsPresentInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.01"/>
-  <testcase name="shouldNotBeAbleToAddTheFieldsInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.018"/>
-  <testcase name="shouldBeAbleToAddTheDateTimeFieldsInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.015"/>
-  <testcase name="shouldBeAbleToReturnFalseIfConfigNameIsPresentInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.011"/>
-  <testcase name="shouldBeAbleToAddTheFieldsInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.012"/>
-  <testcase name="shouldBeAbleToAddTheLengthFieldInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.014"/>
+  <testcase name="shouldBeAbleToGetConfigNamesFromTheDatabase()" classname="database.DatabaseOperationsTest" time="0.244"/>
+  <testcase name="shouldBeAbleToReadConfigDataFromDatabase()" classname="database.DatabaseOperationsTest" time="0.093"/>
+  <testcase name="shouldBeAbleToReturnTrueIfConfigNameIsPresentInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.042"/>
+  <testcase name="shouldNotBeAbleToAddTheFieldsInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.043"/>
+  <testcase name="shouldBeAbleToAddTheDateTimeFieldsInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.024"/>
+  <testcase name="shouldBeAbleToReturnFalseIfConfigNameIsPresentInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.016"/>
+  <testcase name="shouldBeAbleToAddTheFieldsInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.022"/>
+  <testcase name="shouldBeAbleToAddTheLengthFieldInTheDatabase()" classname="database.DatabaseOperationsTest" time="0.023"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
