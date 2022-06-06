@@ -1,13 +1,13 @@
 CREATE TABLE configuration
 (
-    config_id   INT NOT NULL AUTO_INCREMENT,
+    config_id    SERIAL,
     config_name VARCHAR(255) UNIQUE,
     PRIMARY KEY (config_id)
 );
 
 CREATE TABLE csv_fields
 (
-    field_id        INT AUTO_INCREMENT,
+    field_id        SERIAL,
     config_id       INT,
     field_name      VARCHAR(255) NOT NULL,
     field_type      VARCHAR(255),
@@ -24,7 +24,7 @@ CREATE TABLE csv_fields
 
 CREATE TABLE field_values
 (
-    value_id      INT AUTO_INCREMENT,
+    value_id      SERIAL,
     allowed_value VARCHAR(255) NOT NULL,
     field_id      INT,
     PRIMARY KEY (value_id),
