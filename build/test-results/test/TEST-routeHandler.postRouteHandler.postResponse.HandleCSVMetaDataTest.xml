@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-06-06T08:29:06" hostname="Utkashs-MacBook-Pro.local" time="0.0">
+<testsuite name="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" tests="1" skipped="1" failures="0" errors="0" timestamp="2022-06-06T09:04:37" hostname="Utkashs-MacBook-Pro.local" time="0.001">
   <properties/>
-  <testcase name="shouldBeAbleToGetResponseForConfigPOSTRequest()" classname="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" time="0.0">
+  <testcase name="shouldBeAbleToGetResponseForConfigPOSTRequest()" classname="routeHandler.postRouteHandler.postResponse.HandleCSVMetaDataTest" time="0.001">
     <skipped/>
   </testcase>
   <system-out><![CDATA[]]></system-out>

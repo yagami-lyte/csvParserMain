@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ExtractorTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-06-06T08:29:05" hostname="Utkashs-MacBook-Pro.local" time="0.087">
+<testsuite name="ExtractorTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2022-06-06T09:04:35" hostname="Utkashs-MacBook-Pro.local" time="0.122">
   <properties/>
-  <testcase name="shouldBeAbleToReturn200StatusCodeForValidRequest()" classname="ExtractorTest" time="0.014"/>
-  <testcase name="shouldBeAbleToExtractTheFileContentForIndexHTML()" classname="ExtractorTest" time="0.021"/>
-  <testcase name="shouldBeAbleToExtractTheContentLength()" classname="ExtractorTest" time="0.008"/>
-  <testcase name="shouldBeAbleToReturn400StatusCodeForInValidRequest()" classname="ExtractorTest" time="0.0"/>
-  <testcase name="shouldBeAbleToExtractTheFileContentForMainCss()" classname="ExtractorTest" time="0.022"/>
+  <testcase name="shouldBeAbleToReturn200StatusCodeForValidRequest()" classname="ExtractorTest" time="0.025"/>
+  <testcase name="shouldBeAbleToExtractTheFileContentForIndexHTML()" classname="ExtractorTest" time="0.025"/>
+  <testcase name="shouldBeAbleToExtractTheContentLength()" classname="ExtractorTest" time="0.01"/>
+  <testcase name="shouldBeAbleToReturn400StatusCodeForInValidRequest()" classname="ExtractorTest" time="0.001"/>
+  <testcase name="shouldBeAbleToExtractTheFileContentForMainCss()" classname="ExtractorTest" time="0.03"/>
   <testcase name="shouldBeAbleToExtractThePathForAGetRequest()" classname="ExtractorTest" time="0.002"/>
   <testcase name="shouldBeAbleToExtractThePathForAPostRequest()" classname="ExtractorTest" time="0.001"/>
-  <testcase name="shouldBeAbleToExtractConfigName()" classname="ExtractorTest" time="0.001"/>
+  <testcase name="shouldBeAbleToExtractConfigName()" classname="ExtractorTest" time="0.0"/>
   <testcase name="shouldReturn404PageErrorForInvalidJavascriptFileGetRequest()" classname="ExtractorTest" time="0.001"/>
-  <testcase name="shouldBeAbleToReturn400StatusCodeForInValidJSRequest()" classname="ExtractorTest" time="0.0"/>
-  <testcase name="shouldBeAbleToReturn200StatusCodeForValidCSSRequest()" classname="ExtractorTest" time="0.0"/>
-  <testcase name="shouldBeAbleToExtractTheFileContentForMainJs()" classname="ExtractorTest" time="0.012"/>
+  <testcase name="shouldBeAbleToReturn400StatusCodeForInValidJSRequest()" classname="ExtractorTest" time="0.002"/>
+  <testcase name="shouldBeAbleToReturn200StatusCodeForValidCSSRequest()" classname="ExtractorTest" time="0.001"/>
+  <testcase name="shouldBeAbleToExtractTheFileContentForMainJs()" classname="ExtractorTest" time="0.017"/>
   <system-out><![CDATA[<!DOCTYPE html>
 <html lang="en" xmlns:border="http://www.w3.org/1999/xhtml">
 

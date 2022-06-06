@@ -15,7 +15,7 @@ class PostRouteHandler(var fieldArray: Array<ConfigurationTemplate> = arrayOf())
 
     private val handleCsv = HandleCsv()
     private val handleAddingCsvMetaData = HandleCSVMetaData()
-//    private val sendConfigurations = SendConfigurations(DatabaseOperations(Connector()))
+    private val sendConfigurations = SendConfigurations(DatabaseOperations(Connector()))
     private val pageNotFoundResponse = ErrorResponse()
     private val extractor = Extractor()
 
