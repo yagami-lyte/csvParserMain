@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.PrependingZeroesValidationTest" tests="5" skipped="0" failures="3" errors="0" timestamp="2022-06-06T11:58:35" hostname="Utkashs-MacBook-Pro.local" time="4.201">
+<testsuite name="validation.PrependingZeroesValidationTest" tests="5" skipped="0" failures="3" errors="0" timestamp="2022-06-06T12:24:16" hostname="Utkashs-MacBook-Pro.local" time="3.663">
   <properties/>
-  <testcase name="shouldPerformPrependingZeroesCheckWithNoErrors()" classname="validation.PrependingZeroesValidationTest" time="1.739">
+  <testcase name="shouldPerformPrependingZeroesCheckWithNoErrors()" classname="validation.PrependingZeroesValidationTest" time="1.254">
     <failure message="org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
@@ -104,8 +104,8 @@
 </failure>
   </testcase>
   <testcase name="shouldFalseTrueIfValueDoesNotHavePrependingZeroes()" classname="validation.PrependingZeroesValidationTest" time="0.0"/>
-  <testcase name="shouldReturnTrueForPrependingZeroesValues()" classname="validation.PrependingZeroesValidationTest" time="0.0"/>
-  <testcase name="shouldPerformPrependingZeroesCheckWithMultipleErrors()" classname="validation.PrependingZeroesValidationTest" time="1.196">
+  <testcase name="shouldReturnTrueForPrependingZeroesValues()" classname="validation.PrependingZeroesValidationTest" time="0.001"/>
+  <testcase name="shouldPerformPrependingZeroesCheckWithMultipleErrors()" classname="validation.PrependingZeroesValidationTest" time="1.219">
     <failure message="org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
@@ -207,7 +207,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="shouldPerformPrependingZeroesCheck()" classname="validation.PrependingZeroesValidationTest" time="1.265">
+  <testcase name="shouldPerformPrependingZeroesCheck()" classname="validation.PrependingZeroesValidationTest" time="1.189">
     <failure message="org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.TypeValidationTest" tests="3" skipped="0" failures="3" errors="0" timestamp="2022-06-06T11:58:40" hostname="Utkashs-MacBook-Pro.local" time="3.626">
+<testsuite name="validation.TypeValidationTest" tests="3" skipped="0" failures="3" errors="0" timestamp="2022-06-06T12:24:19" hostname="Utkashs-MacBook-Pro.local" time="4.143">
   <properties/>
-  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.TypeValidationTest" time="1.214">
+  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.TypeValidationTest" time="1.258">
     <failure message="org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
@@ -103,7 +103,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.TypeValidationTest" time="1.166">
+  <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.TypeValidationTest" time="1.267">
     <failure message="org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
@@ -205,7 +205,7 @@
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="shouldPerformTypeValidationCheck()" classname="validation.TypeValidationTest" time="1.246">
+  <testcase name="shouldPerformTypeValidationCheck()" classname="validation.TypeValidationTest" time="1.618">
     <failure message="org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;" type="org.postgresql.util.PSQLException">org.postgresql.util.PSQLException: FATAL: too many connections for role &quot;vcbmkareybcfuj&quot;
 	at app//org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2675)
 	at app//org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2787)
