@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.NullValidationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-06-06T04:10:29" hostname="Utkashs-MacBook-Pro.local" time="0.081">
+<testsuite name="validation.NullValidationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-06-06T04:25:56" hostname="Utkashs-MacBook-Pro.local" time="0.081">
   <properties/>
-  <testcase name="shouldCheckIfNullValuesInMultipleFieldsAreAllowed()" classname="validation.NullValidationTest" time="0.022"/>
-  <testcase name="shouldCheckIfNullValuesInMultipleFieldsAreNotAllowed()" classname="validation.NullValidationTest" time="0.019"/>
-  <testcase name="shouldCheckIfNullValuesAreNotAllowed()" classname="validation.NullValidationTest" time="0.019"/>
-  <testcase name="shouldCheckIfNullValuesAreAllowed()" classname="validation.NullValidationTest" time="0.02"/>
+  <testcase name="shouldCheckIfNullValuesInMultipleFieldsAreAllowed()" classname="validation.NullValidationTest" time="0.026"/>
+  <testcase name="shouldCheckIfNullValuesInMultipleFieldsAreNotAllowed()" classname="validation.NullValidationTest" time="0.018"/>
+  <testcase name="shouldCheckIfNullValuesAreNotAllowed()" classname="validation.NullValidationTest" time="0.018"/>
+  <testcase name="shouldCheckIfNullValuesAreAllowed()" classname="validation.NullValidationTest" time="0.017"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

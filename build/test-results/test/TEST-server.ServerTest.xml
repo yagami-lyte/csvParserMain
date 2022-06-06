@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="server.ServerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-06-06T04:10:29" hostname="Utkashs-MacBook-Pro.local" time="0.04">
+<testsuite name="server.ServerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-06-06T04:25:56" hostname="Utkashs-MacBook-Pro.local" time="0.05">
   <properties/>
-  <testcase name="shouldReturnTrueIfTheServerHasStarted()" classname="server.ServerTest" time="0.039"/>
+  <testcase name="shouldReturnTrueIfTheServerHasStarted()" classname="server.ServerTest" time="0.049"/>
   <testcase name="shouldReturnFalseIfTheServerHasNotStarted()" classname="server.ServerTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
