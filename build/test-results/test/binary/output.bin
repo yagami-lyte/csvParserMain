@@ -1,0 +1,2067 @@
+<!DOCTYPE html>
+=<html lang="en" xmlns:border="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+@    <link rel="preconnect" href="https://fonts.googleapis.com">
+I    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+Å    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&family=Roboto:wght@100&family=Ubuntu&display=swap"
+          rel="stylesheet">
+:    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+K    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+h    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+s    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>-->
+x    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>-->
+
+‚    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+{    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">-->
+
+
+‚    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+t    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+h    <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+k    <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+j    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+w          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+C    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+`            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+.            crossorigin="anonymous"></script>
+W    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+`            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+.            crossorigin="anonymous"></script>
+X    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+`            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+.            crossorigin="anonymous"></script>
+
+
+,    <link rel="stylesheet" href="main.css">
+    <title>Csv Parser</title>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+*        <h1>CSV Parser And Validator</h1>
+    </div>
+</div>
+
+
+<div class="row1">
+    <div class="column">
+$        <div id="csv" class="card">
+            <div id="upload">
+$                <div class="frame">
+)                    <div class="center">
+,                        <div class="title">
+A                            <h11>Upload your CSV file here</h11>
+                        </div>
+
+/                        <div class="dropzone">
+l                            <input type="file" style="height: 0;width: 0;overflow: hidden;" name="csv-file"
+T                                   data-cy="chooseFile" id="csv_id" accept=".csv"/>
+D                            <label for="csv_id">Choose File</label>
+                        </div>
+
+Z                        <a id="uploadCSV" href="#config" class="btn-get-started scrollto"
+[                           onclick="getConfigFilesName();getConfigResponse();csvReader();"
+>                           data-cy="upload"><b>Upload</b></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+	<br><br>
+
+
+<div id="config">
+    <div class="container">
+K        <h1 style="margin-top: 38%;"><b>Configure your CSV fields</b></h1>
+        <br><br><br>
+@        <h3> The fields in your CSV are listed down below.</h3>
+x        <div style="width: 600px;align-items: center;justify-content: center; margin:auto;padding:20px;display: flex;">
+™            <select name="type" id="listOfFileNames" style="display: block;   width:auto;height:auto;  padding: 16px 4px; border-radius:10px; background-size: 400% 400%;
+#      background: radial-gradient(
+            hsl(26, 33%, 80%),
+            hsl(10, 3%, 54%)
+	    );">
+
+L                <option value="">Please select the config filename</option>
+            </select>
+ò            <button class="btn waves-effect waves-light" id = "fetchConfigButton" style="margin-left: 15px;margin-top: 3px; background-size: 400% 400%;
+    background: radial-gradient(
+            hsl(26, 33%, 80%),
+            hsl(10, 3%, 54%)
+    ) ;
+9          ;color: black;" onclick="getConfigResponse()">
+"                Fetch config file
+            </button>
+        </div>
+
+
+9        <form onsubmit="return mySubmitFunction(event)">
+            <div id="card-2">
+
+            </div>
+        </form>
+
+
+             <div id = "card-3">
+o                <div id = "fields" style="margin-left: 15%; margin-top: 1.5%; margin-bottom: 1.5%;width: 70%">
+x                    <p style="margin-bottom: 2%" class="col s3"><b>Provide Configuration filename &nbsp;&nbsp;:</b></p>
+Ä                    <input class="col s14" id="fileName" name = "filename" type="text" placeholder="Please enter the filename">
+
+
+
+T                    <div class="form-check" style="margin-top: 2%;font-size: 20px">
+j                        <input type="checkbox" id="configCheckBox" name="configCheckBox" value="checked">
+N                        <label class="form-check-label" for="configCheckBox">
+W                            <strong>Tick the checkBox to save the config Data</strong>
+!                        </label>
+                    </div>
+
+                </div>
+            </div>
+
+v                <div style="margin-left: 27%; display: none; align-items: center;justify-content: center; color:red;"
+2                     id="config_name_validation">
+[                    Configuration filename do not meet the requirement! Please Change it!!
+                </div>
+
+
+    </div>
+</div>
+
+)<a style="  background: radial-gradient(
+            hsl(26, 33%, 80%),
+            hsl(10, 3%, 54%)
+c    ) ;color: black;margin-left: 43%" id='view-errors' onclick="displayErrors();">View Errors </a>
+
+A<p style="text-align:center; color: red;" id='fields-empty'></p>
+
+
+,<div class="loader" id="button-load"></div>
+
+<div class="container">
+1    <h5 style="margin-left: 41%">CSV Errors</h5>
+     <div id="error-msgs"></div>
+</div>
+
+7<script src="main.js" type="text/javascript"></script>
+</body>
+
+</html>
+
+html {
+    scroll-behavior: smooth;
+}
+
+.font-robo {
+B    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+}
+
+
+.card {
+     -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+#    background-color: transparent;
+}
+
+
+
+#card-2 {
+>    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+;    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+6    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+!    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: -18%;
+    margin-bottom: 25%;
+    margin-top: 1.5%;
+!    background: radial-gradient(
+            hsl(0, 2%, 59%),
+            hsl(12, 3%, 69%)
+    );
+    width: 140%;
+    display: table;
+    vertical-align: top;
+}
+
+
+#card-3 {
+>    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+;    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+6    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+!    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-bottom: 25%;
+    margin-top: -15%;
+!    background: radial-gradient(
+            hsl(0, 2%, 59%),
+            hsl(12, 3%, 69%)
+    );
+    width: 80%;
+    display: table;
+    vertical-align: top;
+}
+
+
+#myform {
+    margin-top: 1.5%;
+    margin-left: -60%;
+}
+
+
+#card-2 .card-heading {
+    width: 29.1%;
+}
+
+#card-2 .card-body {
+    display: table-cell;
+    padding: 80px 90px;
+}
+
+@media (max-width: 767px) {
+    #card-2 {
+        display: block;
+    }
+
+    #card-2 .card-heading {
+        width: 100%;
+        display: block;
+        padding-top: 300px;
+*        background-position: left center;
+    }
+
+    #card-2 .card-body {
+        display: block;
+        padding: 60px 50px;
+    }
+}
+
+
+/*input[type="checkbox"] {*/
+"/*    -webkit-appearance: none;*/
+/*    -moz-appearance: none;*/
+/*    appearance: none;*/
+2/*    -webkit-tap-highlight-color: transparent;*/
+/*    cursor: pointer;*/
+/*}*/
+
+#/*input[type="checkbox"]:focus {*/
+/*    outline: 0;*/
+/*}*/
+
+
+.toggle {
+    outline: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+.    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    height: 22px;
+    width: 42px;
+    border-radius: 16px;
+    display: inline-block;
+    position: relative;
+    border: 2px solid #474755;
+C    background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
+    transition: all .2s ease;
+}
+
+.toggle:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+1    box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+=    transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+
+.toggle:checked {
+    border-color: #654FEC;
+}
+
+.toggle:checked:after {
+!    transform: translatex(20px);
+}
+
+'.custom-file-button input[type=file] {
+"    margin-left: -2px !important;
+}
+
+C.custom-file-button input[type=file]::-webkit-file-upload-button {
+    display: none;
+}
+
+=.custom-file-button input[type=file]::file-selector-button {
+    display: none;
+}
+
+".custom-file-button:hover label {
+    background-color: #dde0e3;
+    cursor: pointer;
+}
+
+
+V@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+k@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+	td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+table {
+$    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+marquee {
+    font-size: 30px;
+    font-weight: 800;
+    color: #8ebf42;
+    font-family: sans-serif;
+}
+
+body {
+     background-size: 400% 400%;
+!    background: radial-gradient(
+            hsl(30, 41%, 48%),
+            hsl(199, 14%, 49%)
+    ) fixed;
++    animation: gradient 15s ease infinite;
+    min-height: 100vh;
+}
+
+@keyframes gradient {
+	    0% {
+$        background-position: 0 50%;
+    }
+
+    50% {
+'        background-position: 100% 50%;
+    }
+    100% {
+$        background-position: 0 50%;
+    }
+}
+
+h1 {
+    color: #333333;
+    text-align: center;
+    font-size: 40px;
+'    font-family: 'Ubuntu', sans-serif;
+    margin-top: 8%;
+}
+
+
+h2 {
+    color: darkblue;
+    text-align: left;
+    margin-left: 1%;
+    font-size: 25px;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    height: 35px;
+'    font-family: 'Ubuntu', sans-serif;
+    margin-top: -1%;
+
+}
+
+h4 {
+    background: transparent;
+    margin-bottom: 1em;
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5%;
+'    font-family: 'Ubuntu', sans-serif;
+&    transition: all 0.2s ease-in-out;
+1    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+}
+
+h5 {
+    color: #333333;
+    font-size: 30px;
+"    font-family: "Bodoni", serif;
+    margin-left: 45%;
+}
+
+h6 {
+    color: #333333;
+    margin-left: 3%;
+    font-size: 20px;
+"    font-family: "Bodoni", serif;
+    font-weight: bold;
+}
+
+
+.logo {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+'    font-family: 'Ubuntu', sans-serif;
+    margin-left: 39%;
+}
+
+
+#config {
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    min-height: 540px;
+    margin-bottom: 2%;
+}
+
+
+#fields {
+    padding: 10px;
+    text-align: center;
+    margin-left: -40%;
+!    background: radial-gradient(
+            hsl(26, 33%, 80%),
+            hsl(10, 3%, 54%)
+    );
+    border-radius: 20px;
+    width: 130%;
+}
+
+
+#error_msgs_list {
+'    font-family: 'Ubuntu', sans-serif;
+    font-size: medium;
+    background: grey;
+}
+
+#error-msgs {
+    width: 50%;
+    border-radius: 3px;
+    padding: 20px;
+    margin-left: 16%;
+    margin-top: -2%;
+    min-height: 600px;
+}
+
+.custom-file-input {
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    text-shadow: 1px 1px #fff;
+    font-weight: 1000;
+    font-size: 10pt;
+    width: 180px;
+}
+
+input[type=text], select {
+    width: 120px;
+    font-size: 14px;
+    padding: 12px 20px;
+    display: inline-block;
+    border-radius: 7px;
+    color: black;
+    box-sizing: border-box;
+    margin: 8px 0 8px 1%;
+    height: 40px;
+}
+
+input[type=number], select {
+    width: 195px;
+    padding: 2px 2px 2px 2px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    box-sizing: border-box;
+    margin: 7px 0 7px 4%;
+}
+
+/*[type="file"] {*/
+/*    height: 0;*/
+/*    overflow: hidden;*/
+/*    width: 0;*/
+/*}*/
+
+[type="file"] + label {
+    border: none;
+!    background: radial-gradient(
+             hsl(180, 12%, 37%),
+            hsl(11, 58%, 69%)
+    ) fixed;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+&    font-family: 'Rubik', sans-serif;
+    font-size: inherit;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    outline: none;
+    padding: 1rem 50px;
+    position: relative;
+    transition: all 0.3s;
+    vertical-align: middle;
+}
+
+[type="file"] + label:hover {
+    background-color: #d3460d;
+}
+
+[type="file"] + label.btn-1 {
+    background-color: #f79159;
+    box-shadow: 0 6px #f57128;
+    transition: none;
+}
+
+$[type="file"] + label.btn-1:hover {
+    box-shadow: 0 4px #f57128;
+    top: 2px;
+}
+
+[type="file"] + label.btn-2 {
+    background-color: #99c793;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+&[type="file"] + label.btn-2::before {
+    color: #fff;
+    content: "\f382";
+'    font-family: "Font Awesome 5 Pro";
+    font-size: 100%;
+    height: 100%;
+    right: 130%;
+    line-height: 3.3;
+    position: absolute;
+    top: 0px;
+    transition: all 0.3s;
+}
+
+$[type="file"] + label.btn-2:hover {
+    background-color: #497f42;
+}
+
+,[type="file"] + label.btn-2:hover::before {
+    right: 75%;
+}
+
+[type="file"] + label.btn-3 {
+    background-color: #ee6d9e;
+    border-radius: 0;
+    overflow: hidden;
+}
+
+#[type="file"] + label.btn-3 span {
+    display: inline-block;
+    height: 100%;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+&[type="file"] + label.btn-3::before {
+    color: #fff;
+    content: "\f382";
+'    font-family: "Font Awesome 5 Pro";
+    font-size: 130%;
+    height: 100%;
+    left: 0;
+    line-height: 2.6;
+    position: absolute;
+    top: -180%;
+    transition: all 0.3s;
+    width: 100%;
+}
+
+$[type="file"] + label.btn-3:hover {
+    background-color: #ae144f;
+}
+
+)[type="file"] + label.btn-3:hover span {
+!    transform: translateY(300%);
+}
+
+,[type="file"] + label.btn-3:hover::before {
+    top: 0;
+}
+
+.wrapper {
+    background-color: #fff;
+    border-radius: 1rem;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 2rem;
+    width: 100%;
+}
+
+
+.footer {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    margin-top: 3rem;
+}
+
+h1, p {
+    margin-bottom: 2rem;
+}
+
+h1 {
+&    font-family: 'Rubik', sans-serif;
+    font-size: 1.7rem;
+    color: red;
+}
+
+a {
+    color: #31c1ef;
+    text-decoration: none;
+}
+
+
+
+/*label {
+    background: transparent;
+    padding-right: 5px;
+    margin-bottom: 1em;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5%;
+'    font-family: 'Ubuntu', sans-serif;
+&    transition: all 0.2s ease-in-out;
+1    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}*/
+
+
+p {
+    color: #333333;
+    font-size: 20px;
+    font-weight: bold;
+'    font-family: 'Ubuntu', sans-serif;
+&    transition: all 0.2s ease-in-out;
+}
+
+	button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+4    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.form-type {
+    justify-content: center;
+}
+
+#fileName {
+    width: 300px;
+}
+
+#uploadCSV {
+!    background: radial-gradient(
+             hsl(180, 12%, 37%),
+            hsl(11, 56%, 69%)
+    ) fixed;
+    color: black;
+    padding: 15px 32px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+'    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+'    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    margin: 4px 2px -97px -1%;
+    border-color: black;
+    box-sizing: border-box;
+    height: 50px;
+}
+
+#view-errors {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+'    font-family: 'Ubuntu', sans-serif;
+!    background: radial-gradient(
+            hsl(5, 66%, 51%),
+            hsl(11, 56%, 69%)
+    );
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+'    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    margin: 4px 7% 4px 46%;
+}
+
+button:hover {
+V    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+
+
+.header {
+    z-index: 10;
+!    background: radial-gradient(
+'            hsla(351, 53%, 67%, 0.97),
+            hsl(119, 8%, 51%)
+    ) fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+$    justify-content: space-between;
+    align-items: center;
+    border-radius: 99px;
+}
+
+
+
+.upload {
+    background-color: #a99a86;
+    height: 5%;
+    display: none;
+!    -webkit-border-radius: 30px;
+*    -webkit-background-clip: padding-box;
+    -moz-border-radius: 2px;
+#    -moz-background-clip: padding;
+    border-radius: 6px;
+"    background-clip: padding-box;
+    padding: 20px 20px;
+    margin-top: 4%;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+'    font-family: 'Ubuntu', sans-serif;
+}
+
+
+	.card1 {
+0    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+!    border-left: 4px solid grey;
+"    border-right: 4px solid grey;
+     border-top: 4px solid grey;
+#    border-bottom: 4px solid grey;
+}
+
+
+.column {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.row {
+    margin-left: 34%;
+    margin-top: 3%;
+}
+
+.row1 {
+    margin-bottom: 40%;
+    text-align: center;
+    margin-left: 30%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+'@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.card1-panel {
+'    font-family: 'Ubuntu', sans-serif;
+    border-radius: 20px;
+    margin-left: -60%;
+    padding: 40px;
+    margin-top: -20%;
+    width: 1000px;
+    min-height: 100px;
+    overflow: hidden;
+    opacity: 80%;
+    background: #FFFFF0;
+1    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.success-msg {
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid black;
+    color: black;
+    margin: 10px 0 10px 2%;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 30px;
+    margin-top: 5%;
+    margin-right: 4%;
+    margin-left: -12%;
+
+}
+
+.switch input {
+    opacity: 0;
+    width: 4%;
+    height: 0;
+}
+
+.chooseFile {
+    margin-left: -200%;
+}
+
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 300%;
+    margin-left: -260%;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    font-size: 16px;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+!    box-shadow: 0 0 1px #2196F3;
+}
+
+!input:checked + .slider:before {
+)    -webkit-transform: translateX(26px);
+%    -ms-transform: translateX(26px);
+!    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 24px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.form-container {
+    padding: 10px;
+    background-color: white;
+}
+
+O.form-container input[type=text]:focus, .form-container input[type=password] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    background: #f1f1f1;
+}
+
+U.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+textarea {
+    overflow-y: scroll;
+    height: 150px;
+    resize: none;
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 8px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 10px;
+
+}
+
+#list {
+"    font-family: "Bodoni", serif;
+    font-size: 20px;
+}
+
+	#outer {
+    width: 100%;
+}
+
+	.inner {
+    display: inline-block;
+}
+
+
+.button-control a {
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background: #333333;
+'    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 25px;
+    margin: 4px 2px;
+    cursor: pointer;
+'    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    display: inline-block;
+    visibility: hidden;
+$    justify-content: space-between;
+}
+
+.button-control {
+    text-align: center;
+}
+
+
+#button-load {
+    color: black;
+    padding: 12px 24px;
+    font-size: 36px;
+    text-align: center;
+    margin-left: 48%;
+    margin-top: 3%;
+    visibility: hidden;
+    radius: 24px;
+}
+
+
+.pagination ul {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+0    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pagination ul li {
+    list-style: none;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    margin: 0 10px 0 10px;
+    transition: all 0.3s ease;
+}
+
+.pagination ul li.numb {
+    list-style: none;
+    height: 45px;
+    width: 60px;
+    margin: 0 3px;
+    line-height: 45px;
+    border-radius: 50%;
+}
+
+.pagination ul li.numb.first {
+    margin: 0 3px 0 -5px;
+}
+
+.pagination ul li.numb.last {
+    margin: 0 -5px 0 3px;
+}
+
+.pagination ul li.dots {
+    font-size: 22px;
+    cursor: default;
+}
+
+.pagination ul li.btn {
+    padding: 0 20px;
+    border-radius: 50px;
+}
+
+.pagination li.active,
+.pagination ul li.numb:hover,
+%.pagination ul li:first-child:hover,
+%.pagination ul li:last-child:hover {
+    color: #fff;
+    background: #000;
+}
+
+
+.loader {
+#    animation: rotate 1s infinite;
+    height: 50px;
+    width: 50px;
+}
+
+.loader:before,
+.loader:after {
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 20px;
+    width: 20px;
+}
+
+.loader:before {
+"    animation: ball1 1s infinite;
+    background-color: #cb2025;
+"    box-shadow: 30px 0 0 #f8b334;
+    margin-bottom: 10px;
+}
+
+.loader:after {
+"    animation: ball2 1s infinite;
+    background-color: #00a096;
+"    box-shadow: 30px 0 0 #97bf0d;
+}
+
+@keyframes rotate {
+	    0% {
+4        -webkit-transform: rotate(0deg) scale(0.8);
+1        -moz-transform: rotate(0deg) scale(0.8);
+    }
+
+    50% {
+6        -webkit-transform: rotate(360deg) scale(1.2);
+3        -moz-transform: rotate(360deg) scale(1.2);
+    }
+    100% {
+6        -webkit-transform: rotate(720deg) scale(0.8);
+3        -moz-transform: rotate(720deg) scale(0.8);
+    }
+}
+
+@keyframes ball1 {
+	    0% {
+&        box-shadow: 30px 0 0 #f8b334;
+    }
+
+    50% {
+#        box-shadow: 0 0 0 #f8b334;
+        margin-bottom: 0;
+2        -webkit-transform: translate(15px, 15px);
+/        -moz-transform: translate(15px, 15px);
+    }
+    100% {
+&        box-shadow: 30px 0 0 #f8b334;
+        margin-bottom: 10px;
+    }
+}
+
+@keyframes ball2 {
+	    0% {
+&        box-shadow: 30px 0 0 #97bf0d;
+    }
+
+    50% {
+#        box-shadow: 0 0 0 #97bf0d;
+        margin-top: -20px;
+2        -webkit-transform: translate(15px, 15px);
+/        -moz-transform: translate(15px, 15px);
+    }
+    100% {
+&        box-shadow: 30px 0 0 #97bf0d;
+        margin-top: 0;
+    }
+}
+
+
+H@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+	.frame {
+    position: absolute;
+    left: 35%;
+    width: 650px;
+    height: 440px;
+    margin-top: 300px;
+    margin-left: -200px;
+    border-radius: 39px;
+3    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    color: #acacac;
+5    font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+&    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 360px;
+    border-radius: 39px;
+4    box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+!    background: radial-gradient(
+             hsl(180, 35%, 73%),
+            hsl(18, 29%, 60%)
+    ) fixed;
+    align-items: center;
+#    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+
+h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: black;
+}
+
+
+h11 {
+    font-size: 34px;
+    color: black;
+    border-radius: 6px;
+}
+
+.dropzone {
+    width: 200px;
+    height: 10px;
+    margin-top: -2%;
+}
+
+.upload-icon {
+    margin: 25px 2px 2px 2px;
+}
+
+
+.upload-input {
+    position: relative;
+    top: -62px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.btn {
+    display: block;
+    height: 40px;
+    color: #fff;
+    border-radius: 3px;
+    border: 0;
+&    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+
+/
+/add-meta-data
+var payload = []
+var result = []
+var fields = []
+var fieldCount = 0
+var configName = []
+
+
+3function checkIfConfigNameAlreadyExit(file_name) {
+7    if (configName.indexOf(file_name) !== -1) return 1
+    return 0
+}
+
+ function validateConfigName() {
+>    var file_name = document.getElementById("fileName").value
+H    var getCheckBox = document.getElementById("configCheckBox").checked
+X    if ((file_name === "" || checkIfConfigNameAlreadyExit(file_name)) && getCheckBox) {
+S        document.getElementById("config_name_validation").style.display = 'block';
+        return 0
+    }
+    return 1
+}
+
+function csvReader() {
+X    localStorage.setItem("csv", document.getElementById("csv_id").value.split("\\")[2])
+:    var csv = document.getElementById("csv_id").files[0];
+%    const reader = new FileReader();
+-    reader.onload = async function (event) {
+"        csv = event.target.result
+L        console.log(document.getElementById("csv_id").value.split("\\")[2])
+0        var lines = csv.toString().split("\n");
++        var headers = lines[0].split(",");
+         showColFields(headers);
+        fields.push(headers)
+5        for (var i = 1; i < lines.length - 1; i++) {
+            var obj = {};
+3            var currentLine = lines[i].split(",");
+7            for (var j = 0; j < headers.length; j++) {
+F                obj[headers[j]] = currentLine[j].replaceAll('"', '');
+            }
+            result.push(obj);
+
+        }
+    };
+    reader.readAsText(csv);
+}
+
+
+&async function getConfigFilesName() {
+1    var resp = await fetch('get-config-files', {
+        method: 'GET',
+    })
+
+    if (resp.status === 200) {
+*        var jsonData = await resp.json();
+        console.log(jsonData)
+&        setConfigInDropDown(jsonData)
+    }
+}
+
+'function setConfigInDropDown(object) {
+    console.log(object)
+    for (var i in object) {
+        console.log(object[i])
+&        console.log(object[i] !== "")
+         if (object[i] !== "") {
+#            for (j in object[i]) {
+S                let fileNameDropDown = document.getElementById("listOfFileNames");
+O                var fileNameDropdownOption = document.createElement("option");
+=                fileNameDropdownOption.value = object[i][j];
+<                fileNameDropdownOption.text = object[i][j];
+F                fileNameDropDown.appendChild(fileNameDropdownOption);
+/                configName.push(object[i][j]);
+            }
+
+        }
+    }
+}
+
+%async function getConfigResponse() {
+F    let configName = document.getElementById("listOfFileNames").value
+    if (configName !== "") {
+8        var resp = await fetch('get-config-response', {
+            method: 'POST',
+?            body: JSON.stringify([{"configName": configName}])
+        })
+
+#        if (resp.status === 200) {
+.            var jsonData = await resp.json();
+"            console.log(jsonData)
+(            setValuesInConfig(jsonData)
+
+        }
+    }
+}
+
+%function setValuesInConfig(object) {
+    console.log(object)
+    for (var i in object) {
+        console.log(object[i])
+&        console.log(object[i] !== "")
+         if (object[i] !== "") {
+#            for (j in object[i]) {
+:                changeDefaultValuesOfConfig(object[i][j])
+            }
+
+        }
+    }
+}
+
+/function changeDefaultValuesOfConfig(object) {
+!    for (var fields in object) {
+        console.log(fields)
+%        console.log(`type${fields}`)
+Y        var valueOfTypeId = document.getElementById(`type${fields}`.replaceAll('"', ''))
+&        if (valueOfTypeId !== null) {
+-            setDefaultValues(object, fields)
+
+        }
+    }
+}
+
+,function setDefaultValues(object, fields) {
+a    document.getElementById(`type${fields}`.replaceAll('"', '')).value = object[fields]["type"];
+h    document.getElementById(`fixed-len${fields}`.replaceAll('"', '')).value = object[fields]["length"];
+k    document.getElementById(`allowNull${fields}`.replaceAll('"', '')).value = object[fields]["nullValue"];
+5    if (object[fields]["nullValue"] === "Allowed") {
+_        document.getElementById(`allowNull${fields}`.replaceAll('"', '')).checked = "checked";
+    }
+a    document.getElementById(`date${fields}`.replaceAll('"', '')).value = object[fields]["date"];
+i    document.getElementById(`dateTime${fields}`.replaceAll('"', '')).value = object[fields]["dateTime"];
+m    document.getElementById(`dependent${fields}`.replaceAll('"', '')).value = object[fields]["dependentOn"];
+n    document.getElementById(`dep-val${fields}`.replaceAll('"', '')).value = object[fields]["dependentValue"];
+a    document.getElementById(`time${fields}`.replaceAll('"', '')).value = object[fields]["time"];
+
+!    alterDateTimeOptions(fields)
+}
+
+(function alterDateTimeOptions(fields) {
+    alterDateOption(fields)
+     alterDateTimeOption(fields)
+    alterTimeOption(fields)
+
+Z    const typeValue = document.getElementById(`type${fields}`.replaceAll('"', '')).value;
+     if (typeValue !== "Date") {
+P        document.getElementById(`date${fields}`.replaceAll('"', '')).value = ''
+    }
+     if (typeValue !== "Time") {
+P        document.getElementById(`time${fields}`.replaceAll('"', '')).value = ''
+    }
+$    if (typeValue !== "DateTime") {
+T        document.getElementById(`dateTime${fields}`.replaceAll('"', '')).value = ''
+    }
+}
+
+'function alterDateTimeOption(fields) {
+]    if (document.getElementById(`type${fields}`.replaceAll('"', '')).value === "DateTime") {
+a        document.getElementById(`dateTime${fields}`.replaceAll('"', '')).style.display = 'block'
+c        document.getElementById(`dateTimeDiv${fields}`.replaceAll('"', '')).style.display = 'flex'
+h        document.getElementById(`dateTimeFormats${fields}`.replaceAll('"', '')).style.display = 'block'
+P        document.getElementById(`time${fields}`.replaceAll('"', '')).value = ''
+P        document.getElementById(`date${fields}`.replaceAll('"', '')).value = ''
+U        document.getElementById(`fixed-len${fields}`.replaceAll('"', '')).value = ''
+    }
+}
+
+#function alterDateOption(fields) {
+Y    if (document.getElementById(`type${fields}`.replaceAll('"', '')).value === "Date") {
+]        document.getElementById(`date${fields}`.replaceAll('"', '')).style.display = 'block'
+_        document.getElementById(`dateDiv${fields}`.replaceAll('"', '')).style.display = 'flex'
+d        document.getElementById(`dateFormats${fields}`.replaceAll('"', '')).style.display = 'block'
+c        document.getElementById(`dateTimeDiv${fields}`.replaceAll('"', '')).style.display = 'none'
+T        document.getElementById(`dateTime${fields}`.replaceAll('"', '')).value = ''
+P        document.getElementById(`time${fields}`.replaceAll('"', '')).value = ''
+U        document.getElementById(`fixed-len${fields}`.replaceAll('"', '')).value = ''
+    }
+}
+
+#function alterTimeOption(fields) {
+Y    if (document.getElementById(`type${fields}`.replaceAll('"', '')).value === "Time") {
+]        document.getElementById(`time${fields}`.replaceAll('"', '')).style.display = 'block'
+_        document.getElementById(`timeDiv${fields}`.replaceAll('"', '')).style.display = 'flex'
+d        document.getElementById(`timeFormats${fields}`.replaceAll('"', '')).style.display = 'block'
+_        document.getElementById(`dateDiv${fields}`.replaceAll('"', '')).style.display = 'none'
+T        document.getElementById(`dateTime${fields}`.replaceAll('"', '')).value = ''
+P        document.getElementById(`date${fields}`.replaceAll('"', '')).value = ''
+U        document.getElementById(`fixed-len${fields}`.replaceAll('"', '')).value = ''
+    }
+}
+
+function mySubmitFunction(e) {
+    e.preventDefault();
+    // someBug();
+    return false;
+}
+
+ function showColFields(lines) {
+:    for (var i = 1, j = 0; i <= lines.length; i++, j++) {
+        fieldCount += 1
+1        var row = document.createElement('div');
+7        var field = `${lines[j]}`.replaceAll('"', '');
+)        row.setAttribute("class", "row")
+.        row.setAttribute("id", `row${field}`)
+        row.innerHTML = `
+
+	        
+%        <div id="addConfig${field}">
+             <div id = "fields">
+
+5              <h2 class="title"><b>${field}</b></h2>
++                    <div class="form-row">
+
+X<!--                       <p><span id="typeEmpty${field}" class="error"></span></p>-->
+
+
+S                      <div class="form-group col-md-1.5" style="margin-left: 1%;">
+U                      <select class="form-control" data-cy="type" id="type${field}" 
+»                            onchange="showDateTimeOptions(this.value,'dateDiv${field}','dateFormats${field}' , 'date${field}','timeDiv${field}','timeFormats${field}','time${field}','dateTimeDiv${field}','dateTimeFormats${field}' , 'dateTime${field}' ,'length-div${field}', 'value-div${field},uploadFileDiv${field}');" required>
+a                               <option selected="selected" value="">Choose Type of Data</option>
+G                                <option value="Number">Number</option>
+S                                <option value="AlphaNumeric">AlphaNumeric</option>
+M                                <option value="Alphabets">Alphabets</option>
+X                                <option value="FloatingNumber">Floating Number</option>
+C                                <option value="Text">Text</option>
+L                                <option value="DateTime">Date Time</option>
+C                                <option value="Date">Date</option>
+C                                <option value="Time">Time</option>
+E                                <option value="Email">Email</option>
+&                            </select>
+                      </div>
+                      
+                      
+                      
+              
+
+y                      <div class="form-group col-md-1." style="margin-left: 0.5%;display:flex;" id="length-div${field}">
+»                        <input type="number" class="form-control"  placeholder="Enter Length" min=1 onkeypress="return event.charCode >= 49" type="number" id="fixed-len${field}" data-cy="fixed-len" >
+                      </div>
+                      
+                  
+                    
+–                        <button style="margin-left: 0.8%;margin-top: 0.5%" class="btn btn-primary btn-sm" type="button"  data-toggle="modal" data-target="#chooseValues${field}">Upload or Type Values</button>
+                     
+
+         
+
+®                    <div style="margin-left: 1%;margin-top: 1%" id = "allowEmptyValues1${field}" class="form-group col-md-0" style=" ;margin-top: 1%;margin-left: 6%;">
+9                      <label >Allow Empty Values</label>
+                    </div>
+
+¿                    <div style= "margin-top: 1%;margin-left: -2.5% " id = "allowEmptyValues2${field}" class="form-group col-md-1" style=" white-space: nowrap;margin-left: -2%;margin-top:1%;">
+•                      <input id="allowNull${field}" value="Not Allowed" onclick="toggleYesOrNo(this.id);" style="margin-left: 1.5%;" type="checkbox" class="toggle">
+                    </div>
+
+
+R                    <div class="form-group col-md-1.5" style="margin-left: -2%;">
+K                      <select id="dependent${field}" class="form-control">
+k                        <option disabled="disabled" value ="" selected="selected">Dependent Field</option>
+3                        ${lines.map((element) => {
+Y            return `<option value='${element}'>${element.replaceAll('"', '')}</option>`;
+        })}
+                       </select>
+                      </div>
+
+
+
+e                        <div class="form-group col-md-0" style="margin-left: 0.5%;margin-top: 0.5%">
+|                          <input id="dep-val${field}"  class="form-control" id="inputEmail4" placeholder="Dependent Value">
+                        </div>
+                        
+                     </div>
+                     
+n                      <div id = "dateTimeDiv${field}"  style="display: none; margin-left: 0.8%;width:19.5%;">
+Ç                        <label class ="required-field" for="datetime" id="dateTimeFormats${field}" style='display:none;'></label>
+s                        <select  class="form-control" name="datetime" id='dateTime${field}' style='display:none;'>
+y                             <option disabled = "disabled" selected="selected" value="">Choose Date Time format</option>
+R                             <option value="HH:mm:ss.SSSZ">HH:MM:SS.SSSZ</option>
+P                             <option value="MMMM dd, yy">MMMM DD, YYYY</option>
+f                             <option value="MMM dd, yyyy hh:mm:ss a">MMM dd, yyyy hh:mm:ss a</option>
+j                             <option value="MMM dd HH:mm:ss ZZZZ yyyy">MMM dd HH:mm:ss ZZZZ yyyy</option>
+p                             <option value="yyyy-MM-dd'T'HH:mm:ss.SSS'Z'">yyyy-MM-dd'T'HH:mm:ss.SSS'Z'</option>
+b                             <option value="yyyy-MM-dd'T'HH:mm:ss">YYYY-MM-DD'T'HH:MM:SS</option>
+g                             <option value="MMM dd, yyyy hh:mm:ss a">MMM DD, YYYY HH:MM:SS AM</option>
+j                             <option value="dd/MMM/yyyy:HH:mm:ss ZZZZ">DD/MMM/YYYY:HH:MM:SS ZZZZ</option>
+j                             <option value="MMM dd HH:mm:ss ZZZZ yyyy">MMM DD HH:MM:SS ZZZZ YYYY</option>
+`                             <option value="MMM dd yyyy HH:mm:ss">MMM DD YYYY HH:MM:SS</option>
+c                             <option value="MM/dd/yyyy hh:mm:ss a">MM/DD/YYYY HH:MM:SS AM</option>
+k                             <option value="MM/dd/yyyy hh:mm:ss a:SSS">MM/DD/YYYY HH:MM:SS AM:SSS</option>
+Z                             <option value="MMdd_HH:mm:ss.SSS">MMDD_HH:MM:SS.SSS</option>
+R                             <option value="MMdd_HH:mm:ss">MMDD_HH:MM:SS</option>
+h                             <option value="dd MMM yyyy HH:mm:ss*SSS">DD MMM YYYY HH:MM:SS*SSS</option>
+`                             <option value="dd MMM yyyy HH:mm:ss">DD MMM YYYY HH:MM:SS</option>
+a                             <option value="dd/MMM/yyyy HH:mm:ss"">DD/MMM/YYYY HH:MM:SS</option>
+_                             <option value="dd/MMM HH:mm:ss,SSS"">DD/MMM HH:MM:SS,SSS</option>
+"                        </select>
+                        </div>
+                        
+k                        <div id = "dateDiv${field}" style="display: none; margin-left: 0.8%;width:16.0%;">
+}                          <label class ="required-field"  for="date" id="dateFormats${field}" style='display:none;'></label>
+o                            <select  class="form-control" name="date" id='date${field}' style='display:none;'>
+b                                 <option selected="selected" value="">Choose Date Format</option>
+P                                 <option value="MM-dd-yyyy">MM-DD-YYYY</option>
+P                                 <option value="dd-MM-yyyy">DD-MM-YYYY</option>
+T                                 <option value="dd/MM/yyyy, yy">DD/MM/YYYY</option>
+K                                <option value="yy/MM/dd">YY/MM/DD</option>
+O                                <option value="yyyy/MM/dd">YYYY/MM/DD</option>
+I                                <option value="M/d/yyy">M/D/yyy</option>
+K                                <option value="d/M/yyyy">D/M/YYYY</option>
+M                                <option value="yyyy/M/dd">YYYY/M/DD</option>
+K                                <option value="ddMMyYYy">DDMMYYYY</option>
+O                                <option value="yyyy-MM-dd">YYYY-MM-DD</option>
+&                            </select>
+!                          </div>
+
+n                          <div id = "timeDiv${field}"  style="display: none; margin-left: 0.8%;width:16.0%;">
+~                            <label class ="required-field"  for="time" style='display:none;' id="timeFormats${field}"</label>
+n                           <select  class="form-control" name="time" id='time${field}' style='display:none;'>
+M                                <option value="">Choose Time Format</option>
+K                                <option value="hh:mm:ss">HH:MM:SS</option>
+S                                <option value="HH:mm:ss zzz">HH:MM:SS ZZZ</option>
+U                                <option value="HH:mm:ss.SSSZ">HH:MM:SS.SSSZ</option>
+%                           </select>
+#                            </div>
+                     
+                     
+-                                            
+$                     <!-- Modal -->
+Ü<div class="modal fade" id="chooseValues${field}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+-  <div class="modal-dialog" role="document">
+     <div class="modal-content">
+!      <div class="modal-header">
+J        <h5 class="modal-title" id="exampleModalLabel">Choose Values</h5>
+U        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+2          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+%        <div class="form-container">
+
+:          <h6>Upload Values in the form of text file</h6>
+
+à<!--          <div id="uploadFileDiv${field}"  class="form-group col-md-8" style="margin-top: 0.4%; display:flex; margin-left: 19%">-->
+            <div class="mb-3">
+™              <input onchange="readFile(event,'${field}');" id="text_file_id${field}" style="display:flex;  accept=".txt" class="form-control" type="file" id="formFile">
+            </div>
+<!--          </div>-->
+
+          <br><br><br>
+          
+A          <h6 style="font-size: medium;margin-top: -10%">OR</h6>
+
+ü          <button data-dismiss="modal" style="margin-left: 40%;"  type="button" class="btn btn-primary" data-toggle="modal" data-target="#typeValues${field}">
+            Type Values
+          </button>
+
+        </div>
+      </div>
+!      <div class="modal-footer">
+\        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+L        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+	  </div>
+</div>
+
+
+
+<!-- Modal -->
+Ñ<div class="modal fade" id="typeValues${field}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+-  <div class="modal-dialog" role="document">
+     <div class="modal-content">
+!      <div class="modal-header">
+H        <h5 class="modal-title" id="exampleModalLabel">Type Values</h5>
+U        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+2          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+%        <div class="form-container">
+
+k          <textarea style="margin-right: 50%" id="textArea${field}" placeholder="Enter Values"></textarea>
+          <div id = "list"> 
+f          <ul style='font-size:15px;font-family: "Bodoni", serif;margin-left: 47%; margin-top: -42%'>
+T               <li> Please Enter the values in newline without any delimiters</li> 
+"               <li> Example:</li>
+               <ul>
+#                   <li> Val1 </li>
+#                   <li> Val2 </li>
+#                   <li> Val3 </li>
+               </ul>
+
+          </ul>
+          </div>
+      
+
+        </div>
+      </div>
+!      <div class="modal-footer">
+\        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+L        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+	  </div>
+</div>
+                     
+                  
+               
+                  </div>
+                  </div>
+                 `
+;        document.getElementById("card-2").appendChild(row)
+    }
+
+.    var name = document.createElement('div');
+$    row.setAttribute("id", `name`);
+
+ã    name.innerHTML = `<button style="margin-left:45%; margin-top: 1%; margin-bottom: 1%" class="btn btn-dark" type="submit">Save</button>`
+8    document.getElementById("card-2").appendChild(name)
+
+}
+
+
+/*function typeMandatory() {
+    var emptyFields = 0
+6    for (var i = 1, j = 0; i <= fieldCount; i++,j++){
+[        var typeField = document.getElementById(`type${fields[0][j]}`.replaceAll('"', ''))
+$        if (typeField.value == ""){
+v            document.getElementById(`typeEmpty${fields[0][j]}`.replaceAll('"', '')).innerHTML="Please select a type";
+h            document.getElementById("fields-empty").innerHTML = "You have left mandatory fields empty!"
+            emptyFields += 1
+
+        }
+        else {
+b            document.getElementById(`typeEmpty${fields[0][j]}`.replaceAll('"', '')).innerHTML="";
+
+        }
+    }
+    return (emptyFields == 0)
+}*/
+
+
+"function toggleYesOrNo(element) {
+:    let oldValue = document.getElementById(element).value
+&    if (oldValue === "Not Allowed") {
+;        document.getElementById(element).value = "Allowed"
+        return
+    }
+;    document.getElementById(element).value = "Not Allowed"
+}
+
+Ωfunction showDateTimeOptions(value, dateDivID, dateFormatId, dateId, timeDivID, timeFormatId, timeId, dateTimeDivID, dateTimeFormatId, dateTimeId, lengthDivId, valueDivId, uploadFileDiv) {
+?    var dateDivIDElement = document.getElementById(dateDivID);
+C    var dateFormatElement = document.getElementById(dateFormatId);
+?    var dateIdFormatElement = document.getElementById(dateId);
+?    var timeDivIDElement = document.getElementById(timeDivID);
+C    var timeFormatElement = document.getElementById(timeFormatId);
+?    var timeIdFormatElement = document.getElementById(timeId);
+A    var lengthDivElement = document.getElementById(lengthDivId);
+?    var valueDivElement = document.getElementById(valueDivId);
+G    var dateTimeDivIDElement = document.getElementById(dateTimeDivID);
+K    var dateTimeFormatElement = document.getElementById(dateTimeFormatId);
+G    var dateTimeIdFormatElement = document.getElementById(dateTimeId);
+D    var uploadFileElement = document.getElementById(uploadFileDiv);
+
+     if (value === 'DateTime') {
+ä        showDateTimeField(uploadFileElement, dateDivIDElement, dateFormatElement, dateIdFormatElement, timeDivIDElement, timeFormatElement, timeIdFormatElement, lengthDivElement, valueDivElement, dateTimeDivIDElement, dateTimeFormatElement, dateTimeIdFormatElement)
+#    } else if (value === 'Date') {
+Û        showDateField(dateDivIDElement, dateFormatElement, dateIdFormatElement, timeDivIDElement, timeFormatElement, timeIdFormatElement, lengthDivElement, valueDivElement, dateTimeDivIDElement, dateTimeFormatElement, dateTimeIdFormatElement)
+#    } else if (value === 'Time') {
+Û        showTimeField(dateDivIDElement, dateFormatElement, dateIdFormatElement, timeDivIDElement, timeFormatElement, timeIdFormatElement, lengthDivElement, valueDivElement, dateTimeDivIDElement, dateTimeFormatElement, dateTimeIdFormatElement)
+    } else {
+1        dateDivIDElement.style.display = 'none';
+2        dateFormatElement.style.display = 'none';
+4        dateIdFormatElement.style.display = 'none';
+5        dateTimeDivIDElement.style.display = 'none';
+6        dateTimeFormatElement.style.display = 'none';
+8        dateTimeIdFormatElement.style.display = 'none';
+1        timeDivIDElement.style.display = 'none';
+2        timeFormatElement.style.display = 'none';
+4        timeIdFormatElement.style.display = 'none';
+5        dateTimeDivIDElement.style.display = 'none';
+6        dateTimeFormatElement.style.display = 'none';
+8        dateTimeIdFormatElement.style.display = 'none';
+3        // valueDivElement.style.display = 'flex';
+2        lengthDivElement.style.display = 'block';
+    }
+}
+
+ˆfunction showDateField(dateDivIDElement, dateFormatElement, dateIdFormatElement, timeDivIDElement, timeFormatElement, timeIdFormatElement, lengthDivElement, valueDivElement, dateTimeDivIDElement, dateTimeFormatElement, dateTimeIdFormatElement) {
+-    dateDivIDElement.style.display = 'flex';
+/    dateFormatElement.style.display = 'block';
+1    dateIdFormatElement.style.display = 'block';
+-    timeDivIDElement.style.display = 'none';
+.    timeFormatElement.style.display = 'none';
+0    timeIdFormatElement.style.display = 'none';
+1    dateTimeDivIDElement.style.display = 'none';
+2    dateTimeFormatElement.style.display = 'none';
+4    dateTimeIdFormatElement.style.display = 'none';
+/    // valueDivElement.style.display = 'none';
+-    lengthDivElement.style.display = 'none';
+}
+
+ˆfunction showTimeField(dateDivIDElement, dateFormatElement, dateIdFormatElement, timeDivIDElement, timeFormatElement, timeIdFormatElement, lengthDivElement, valueDivElement, dateTimeDivIDElement, dateTimeFormatElement, dateTimeIdFormatElement) {
+-    timeDivIDElement.style.display = 'flex';
+/    timeFormatElement.style.display = 'block';
+1    timeIdFormatElement.style.display = 'block';
+-    dateDivIDElement.style.display = 'none';
+.    dateFormatElement.style.display = 'none';
+0    dateIdFormatElement.style.display = 'none';
+1    dateTimeDivIDElement.style.display = 'none';
+2    dateTimeFormatElement.style.display = 'none';
+4    dateTimeIdFormatElement.style.display = 'none';
+/    // valueDivElement.style.display = 'none';
+-    lengthDivElement.style.display = 'none';
+}
+
+êfunction showDateTimeField(uploadFileDivElement, dateDivIDElement, dateFormatElement, dateIdFormatElement, timeDivIDElement, timeFormatElement, timeIdFormatElement, lengthDivElement, valueDivElement, dateTimeDivIDElement, dateTimeFormatElement, dateTimeIdFormatElement) {
+1    dateTimeDivIDElement.style.display = 'flex';
+3    dateTimeFormatElement.style.display = 'block';
+5    dateTimeIdFormatElement.style.display = 'block';
+4    // uploadFileDivElement.style.display = 'none';
+-    dateDivIDElement.style.display = 'none';
+.    dateFormatElement.style.display = 'none';
+0    dateIdFormatElement.style.display = 'none';
+-    timeDivIDElement.style.display = 'none';
+.    timeFormatElement.style.display = 'none';
+0    timeIdFormatElement.style.display = 'none';
+/    // valueDivElement.style.display = 'none';
+-    lengthDivElement.style.display = 'none';
+}
+
+&function readFile(event, fieldName) {
+N    var value = document.getElementById(`text_file_id${fieldName}`).files[0];
+    if (value != null) {
+'        let reader = new FileReader();
+7        reader.addEventListener('load', function (e) {
+'            let text = e.target.result
+:            console.log(JSON.stringify(text.split('\n')))
+O            localStorage.setItem(fieldName, JSON.stringify(text.split('\n')));
+        });
+!        reader.readAsText(value)
+    }
+    return null;
+}
+
+function addDataToJson() {
+8    for (var i = 1, j = 0; i <= fieldCount; i++, j++) {
+        let jsonObj = {}
+!        var field = fields[0][j]
+=        var configName = document.getElementById("fileName")
+V        var type = document.getElementById(`type${fields[0][j]}`.replaceAll('"', ''))
+h        var value = document.getElementById(`text_file_id${fields[0][j]}`.replaceAll('"', '')).files[0]
+a        var typedValues = document.getElementById(`textArea${fields[0][j]}`.replaceAll('"', ''))
+`        var fixed_len = document.getElementById(`fixed-len${fields[0][j]}`.replaceAll('"', ''))
+b        var dependentOn = document.getElementById(`dependent${fields[0][j]}`.replaceAll('"', ''))
+c        var dependentValue = document.getElementById(`dep-val${fields[0][j]}`.replaceAll('"', ''))
+\        var dateFormat = document.getElementById(`date${fields[0][j]}`.replaceAll('"', ''))
+\        var timeFormat = document.getElementById(`time${fields[0][j]}`.replaceAll('"', ''))
+d        var dateTimeFormat = document.getElementById(`dateTime${fields[0][j]}`.replaceAll('"', ''))
+a        var nullValues = document.getElementById(`allowNull${fields[0][j]}`.replaceAll('"', ''))
+O        var configCheckBox = document.getElementById("configCheckBox").checked
+
+J        jsonObj["configName"] = document.getElementById("fileName").value
+?        console.log(document.getElementById("fileName").value)
+3        jsonObj["datetime"] = dateTimeFormat.value
++        jsonObj["date"] = dateFormat.value
++        jsonObj["time"] = timeFormat.value
+0        jsonObj["nullValue"] = nullValues.value
+&        console.log(nullValues.value)
+%        jsonObj["fieldName"] = field
+%        jsonObj["type"] = type.value
+        if (!configCheckBox) {
+'            jsonObj["configName"] = ""
+
+        }
+        if (value != null) {
+H            jsonObj["values"] = JSON.parse(localStorage.getItem(field))
+5            console.log(localStorage.getItem(field))
+
+        }
+(        if (typedValues.value !== '') {
+>            jsonObj["values"] = typedValues.value.split('\n')
+
+        }
+,        jsonObj["length"] = fixed_len.value
+3        jsonObj["dependentOn"] = dependentOn.value
+9        jsonObj["dependentValue"] = dependentValue.value
+%        const typeValue = type.value
+X        if (typeValue !== "Date" && typeValue !== "Time" && typeValue !== "DateTime") {
+%            jsonObj["datetime"] = ''
+!            jsonObj["date"] = ''
+!            jsonObj["time"] = ''
++        } else if (typeValue === "Date") {
+%            jsonObj["datetime"] = ''
+#            jsonObj["length"] = ''
+!            jsonObj["time"] = ''
++        } else if (typeValue === "Time") {
+%            jsonObj["datetime"] = ''
+!            jsonObj["date"] = ''
+#            jsonObj["length"] = ''
+/        } else if (typeValue === "DateTime") {
+#            jsonObj["length"] = ''
+!            jsonObj["date"] = ''
+!            jsonObj["time"] = ''
+
+        }
+
+        payload.push(jsonObj)
+    }
+    console.log(payload)
+}
+
+"async function sendConfigData() {
+    addDataToJson()
+.    var resp = await fetch('add-meta-data', {
+        method: 'POST',
+&        body: JSON.stringify(payload)
+    })
+
+    if (resp.status === 200) {
+*        var jsonData = await resp.json();
+        console.log(jsonData)
+    }
+}
+
+!async function displayErrors() {
+    emptyErrorList()
+N    document.getElementById("config_name_validation").style.display = 'none';
+     if (validateConfigName()) {
+?        document.getElementById("fields-empty").innerHTML = ""
+        loadingEffect()
+        sendConfigData()
+.        const response = await fetch('csv', {
+            method: 'POST',
+)            body: JSON.stringify(result)
+        })
+
+'        if (response.status === 200) {
+2            var jsonData = await response.json();
+            loadingEffect();
+"            console.log(jsonData)
+            traverse(jsonData)
+
+        }
+<        var loader = document.getElementById("button-load")
+,        loader.style.visibility = "hidden";
+        payload = []
+        configName = []
+    }
+}
+
+function traverse(object) {
+;    let errorBase = document.getElementById("error-msgs");
+    for (var i in object) {
+,        let key = Object.keys(object[i])[0]
+        console.log(key)
+&        key = key.replaceAll('"', '')
+-        let value = Object.values(object[i])
+(        createDivElement(key, value[0])
+A        let fieldsDivElement = document.getElementById(`${key}`)
+1        if (fieldsDivElement.innerHTML === '') {
+             removeErrorDiv(key)
+
+        }
+    }
+&    if (errorBase.innerHTML === '') {
+'        createSuccessErrMsg(errorBase)
+    }
+}
+
+*function createSuccessErrMsg(errorBase) {
+-    let row = document.createElement("div");
+    row.innerHTML = `
+F        <div style="display:flex; flex-direction: row;padding:20px;">
+º          <div style="width: 92%;font-size:20px; font-weight:400; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);  border-radius: 3px;  padding:38px; text-align:left;color:white;margin:auto">
+O          <marquee scrollamount="12">No Error Found In Your CSV File</marquee>
+          </div>
+      </div>`;
+
+     errorBase.appendChild(row);
+}
+
+function removeErrorDiv(key) {
+;    let errorBase = document.getElementById("error-msgs");
+9    var child = document.getElementById(key + " error");
+"    errorBase.removeChild(child);
+}
+
+(function createDivElement(key, value) {
+"    key = key.replaceAll('"', '')
+;    let errorBase = document.getElementById("error-msgs");
+-    let row = document.createElement("div");
++    row.setAttribute("id", key + " error")
+    row.innerHTML = `
+Y                <div style="display:flex; flex-direction: row;padding:20px;width:700px">
+≈                  <div style="width: 150%;font-size:20px; font-weight:400; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);  border-radius: 3px;  padding:18px; text-align:left;color:white;margin:auto">
+1                  <p style="margin:auto;">${key}
+à                  <svg  style="float:right;" width="15" height="25" viewBox="0 0 9 7" fill="black" xmlns="http://www.w3.org/2000/svg" >
+ª                  <path style="display:block;z-index:-1" d="M5.81565 1.5L4.4261 3.75802L2.86285 1.5H5.81565Z" stroke="black" stroke-width="4" onclick="goUp('${key}')" id="UpDrop${key}"/>
+                  </svg>
+                  </p>
+                  </div>
+              </div>
+d              <div class="card-panel left-align" style=" width:63%; font-size:20px;font-weight:200;
+-                background: radial-gradient(
+            hsl(30, 41%, 48%),
+            hsl(199, 14%, 49%)
+\    ) fixed ; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); border-radius: 3px; padding:50px;
+k              text-align:left; color:black; display:none;width: 100%;margin-left: 20%;border-radius: 9px;"
+!              id="${key}"></div>
+          </div>
+        `;
+
+    errorBase.appendChild(row)
+    for (i in value) {
+%        console.log(value[i].length)
+        if (i === 'Duplicate Errors' && value[i].length !== 0 && document.getElementById("Duplicate Errors error") === null) {
+1            createDuplicationErrMsg(value[i], i)
+
+        }
+        console.log(i)
+A        if (value[i].length !== 0 && i !== 'Duplicate Errors') {
+?            createTableForDisplayingErrorMsg(value[i], key, i)
+
+        }
+    }
+}
+
+/function createDuplicationErrMsg(value, key) {
+;    let errorBase = document.getElementById("error-msgs");
+-    let row = document.createElement("div");
++    row.setAttribute("id", key + " error")
+    row.innerHTML = `
+F        <div style="display:flex; flex-direction: row;padding:20px;">
+º          <div style="width: 92%;font-size:20px; font-weight:400; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);  border-radius: 3px;  padding:18px; text-align:left;color:white;margin:auto">
+)          <p style="margin:auto;">${key}
+Ä          <svg  style="float:right;" width="15" height="25" viewBox="0 0 9 7" fill="black" xmlns="http://www.w3.org/2000/svg" >
+≥          <path style="display:block;z-index:-1" d="M5.81565 1.5L4.4261 3.75802L2.86285 1.5H5.81565Z" stroke="black" stroke-width="4" onclick="goUp('${key}')" id="UpDrop${key}"/>
+          </svg>
+          </p>
+          </div>
+      </div>
+á      <div class="card-panel left-align" style="margin:auto; width:83%; font-size:20px; font-weight:200;  background: radial-gradient(
+            hsl(30, 41%, 48%),
+            hsl(199, 14%, 49%)
+    ) fixed;
+Ä      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); border-radius: 3px; padding:50px; text-align:left; color:black; display:none;
+      "
+      id="${key}"></div>
+      </div>
+    `;
+
+    errorBase.appendChild(row)
+.    createTableForDuplicateErrors(value, key)
+}
+
+5function createTableForDuplicateErrors(value, key) {
+(    let p = document.createElement("p")
+"    p.setAttribute("id", "error")
+    p.style.marginTop = "0px"
+W    p.innerHTML = `<b style="font-weight: 900;">${key} present in rows:</b><br/><br/>`
+0    let table = document.createElement("table")
+    console.log(table)
+    let i = 0;
+&    console.log("size", value.length)
+1    let firstRow = document.createElement("tr");
+4    let firstHeading = document.createElement("td")
+5    let secondHeading = document.createElement("td")
++    firstHeading.innerHTML = "Row Number "
+7    secondHeading.innerHTML = "Copied From Row Number"
+(    firstRow.appendChild(firstHeading);
+)    firstRow.appendChild(secondHeading);
+     table.appendChild(firstRow)
+    while (i < value.length) {
+3        let newRow = document.createElement("tr");
+0        let td_1 = document.createElement("td")
+0        let td_2 = document.createElement("td")
+"        td_1.innerHTML = value[i]
+&        td_2.innerHTML = value[i + 1]
+"        newRow.appendChild(td_1);
+"        newRow.appendChild(td_2);
+"        table.appendChild(newRow)
+        i = i + 2;
+    }
+
+    p.appendChild(table)
+3    let parent = document.getElementById(`${key}`)
+    parent.appendChild(p)
+}
+
+>function createTableForDisplayingErrorMsg(value, key, type) {
+(    let p = document.createElement("p")
+"    p.setAttribute("id", "error")
+    p.style.marginTop = "0px"
+X    p.innerHTML = `<b style="font-weight: 900;">${type} present in rows:</b><br/><br/>`
+0    let table = document.createElement("table")
+    console.log(table)
+    let i = 0;
+    let j = 0;
+&    console.log("size", value.length)
+    while (i < value.length) {
+3        let newRow = document.createElement("tr");
+0        while (j < i + 5 && j < value.length) {
+2            let td = document.createElement("td")
+$            td.innerHTML = value[j]
+$            newRow.appendChild(td);
+            j++;
+
+        }
+"        table.appendChild(newRow)
+        i = j;
+    }
+    p.appendChild(table)
+3    let parent = document.getElementById(`${key}`)
+    parent.appendChild(p)
+}
+
+function goDown(key) {
+Â    document.getElementById(`DownDrop${key}`).outerHTML = `<path style="display:block;z-index:-1" d="M5.81565 1.5L4.4261 3.75802L2.86285 1.5H5.81565Z" stroke="black" stroke-width="4" onclick="goUp('${key}')" id="UpDrop${key}"/>`
+=    document.getElementById(`${key}`).style.display = "none"
+}
+
+function goUp(key) {
+ƒ    document.getElementById(`UpDrop${key}`).outerHTML = `  <path d="M5.81565 5L4.4261 2.74198L2.86285 5H5.81565Z" stroke="black" stroke-width="4" onclick="goDown('${key}')" id="DownDrop${key}"/>`
+>    document.getElementById(`${key}`).style.display = "block"
+}
+
+
+function emptyErrorList() {
+6    const el = document.getElementById("error-msgs");
+    while (el.firstChild) {
+&        el.removeChild(el.firstChild)
+    }
+}
+
+function loadingEffect() {
+8    var loader = document.getElementById("button-load")
+)    loader.style.visibility = "visible";
+}
+yxHTTP/1.1 200 Ok
+yx

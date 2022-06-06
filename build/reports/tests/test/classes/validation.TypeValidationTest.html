@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.027s</div>
+<div class="counter">0.001s</div>
 <p>duration</p>
 </div>
 </td>
@@ -74,17 +74,17 @@
 <h3 class="failures">shouldPerformTypeValidationCheck()</h3>
 <span class="code">
 <pre>java.sql.SQLException: No suitable driver found for postgres://vcbmkareybcfuj:1472a5b4872eff85846616a7cefeadb5a8c11faa5e838a5e663778ecb7f1b00f@ec2-54-147-33-38.compute-1.amazonaws.com:5432/d5thkls1el9a60
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
 	at database.Connector.makeConnection(Connector.kt:11)
 	at database.DatabaseOperations.&lt;init&gt;(DatabaseOperations.kt:8)
 	at routeHandler.postRouteHandler.PostRouteHandler.&lt;init&gt;(PostRouteHandler.kt:18)
 	at routeHandler.postRouteHandler.PostRouteHandler.&lt;init&gt;(PostRouteHandler.kt:14)
 	at validation.TypeValidationTest.shouldPerformTypeValidationCheck(TypeValidationTest.kt:84)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
 	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
@@ -147,9 +147,9 @@
 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
@@ -172,17 +172,17 @@
 <h3 class="failures">shouldReturnJsonArrayWithMultipleErrors()</h3>
 <span class="code">
 <pre>java.sql.SQLException: No suitable driver found for postgres://vcbmkareybcfuj:1472a5b4872eff85846616a7cefeadb5a8c11faa5e838a5e663778ecb7f1b00f@ec2-54-147-33-38.compute-1.amazonaws.com:5432/d5thkls1el9a60
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
 	at database.Connector.makeConnection(Connector.kt:11)
 	at database.DatabaseOperations.&lt;init&gt;(DatabaseOperations.kt:8)
 	at routeHandler.postRouteHandler.PostRouteHandler.&lt;init&gt;(PostRouteHandler.kt:18)
 	at routeHandler.postRouteHandler.PostRouteHandler.&lt;init&gt;(PostRouteHandler.kt:14)
 	at validation.TypeValidationTest.shouldReturnJsonArrayWithMultipleErrors(TypeValidationTest.kt:103)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
 	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
@@ -245,9 +245,9 @@
 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
@@ -270,17 +270,17 @@
 <h3 class="failures">shouldReturnJsonArrayWithNoErrors()</h3>
 <span class="code">
 <pre>java.sql.SQLException: No suitable driver found for postgres://vcbmkareybcfuj:1472a5b4872eff85846616a7cefeadb5a8c11faa5e838a5e663778ecb7f1b00f@ec2-54-147-33-38.compute-1.amazonaws.com:5432/d5thkls1el9a60
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:702)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:251)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:706)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:252)
 	at database.Connector.makeConnection(Connector.kt:11)
 	at database.DatabaseOperations.&lt;init&gt;(DatabaseOperations.kt:8)
 	at routeHandler.postRouteHandler.PostRouteHandler.&lt;init&gt;(PostRouteHandler.kt:18)
 	at routeHandler.postRouteHandler.PostRouteHandler.&lt;init&gt;(PostRouteHandler.kt:14)
 	at validation.TypeValidationTest.shouldReturnJsonArrayWithNoErrors(TypeValidationTest.kt:122)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
 	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
 	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
@@ -343,9 +343,9 @@
 	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
@@ -376,7 +376,7 @@
 </thead>
 <tr>
 <td class="failures">shouldPerformTypeValidationCheck()</td>
-<td class="failures">0.001s</td>
+<td class="failures">0s</td>
 <td class="failures">failed</td>
 </tr>
 <tr>
@@ -386,7 +386,7 @@
 </tr>
 <tr>
 <td class="failures">shouldReturnJsonArrayWithNoErrors()</td>
-<td class="failures">0.025s</td>
+<td class="failures">0s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -399,7 +399,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.2</a> at 6 Jun 2022, 16:56:47</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 6 Jun 2022, 17:09:21</p>
 </div>
 </div>
 </body>

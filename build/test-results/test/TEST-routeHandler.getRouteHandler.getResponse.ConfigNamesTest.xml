@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="routeHandler.getRouteHandler.getResponse.ConfigNamesTest" tests="3" skipped="3" failures="0" errors="0" timestamp="2022-06-06T11:39:20" hostname="Utkashs-MacBook-Pro.local" time="0.001">
+  <properties/>
+  <testcase name="shouldBeAbleToGetZeroConfigurationNamesForConfigNameGetRequest()" classname="routeHandler.getRouteHandler.getResponse.ConfigNamesTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="shouldBeAbleToGetConfigurationNamesForConfigNameGetRequest()" classname="routeHandler.getRouteHandler.getResponse.ConfigNamesTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="shouldBeAbleToGetMultipleConfigurationNamesForConfigNameGetRequest()" classname="routeHandler.getRouteHandler.getResponse.ConfigNamesTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

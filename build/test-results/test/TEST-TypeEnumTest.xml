@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TypeEnumTest" tests="94" skipped="0" failures="0" errors="0" timestamp="2022-06-06T11:39:20" hostname="Utkashs-MacBook-Pro.local" time="0.209">
+  <properties/>
+  <testcase name="shouldBeAbleToCheckIfValueIsNumeric()" classname="TypeEnumTest" time="0.003"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsAlphaNumeric()" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[1] dateTimeFormat=MM-dd-yyyy, dateTimeValue=01  2-218" classname="TypeEnumTest" time="0.016"/>
+  <testcase name="[2] dateTimeFormat=HH:mm:ss.SSS, dateTimeValue=13:0.454+0530" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[3] dateTimeFormat=MMMM dd, yy, dateTimeValue=February 17 2009" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[4] dateTimeFormat=yy/MM/dd, dateTimeValue=2009/0217" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[5] dateTimeFormat=dd/MM/yy, dateTimeValue=17/ 022009" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[6] dateTimeFormat=MMM dd, yyyy hh:mm:ss a, dateTimeValue=Dec , 2017 2:39:58 AM" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[7] dateTimeFormat=dd/MMM/yyyy:HH:mm:ss ZZZZ, dateTimeValue=19/ /2017:  06:36:15 -0700" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[8] dateTimeFormat=MM/dd/yyyy hh:mm:ss a, dateTimeValue=9/28/2011 2/ 23:15 PM" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[9] dateTimeFormat=MM/dd/yyyy hh:mm:ss a, dateTimeValue=9/28011 2:23:15 PM" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[10] dateTimeFormat=MM/dd/yyyy hh:mm:ss a:SSS, dateTimeValue=8/511 3:31:18 AM:234" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[11] dateTimeFormat=MMdd_HH:mm:ss.SSS, dateTimeValue=0423_::11:42:35.883" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[12] dateTimeFormat=MMdd_HH:mm:ss, dateTimeValue=04231:42:35" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[13] dateTimeFormat=dd MMM yyyy HH:mm:ss*SSS, dateTimeValue=23 Apr 2017 10//32:35*311" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[14] dateTimeFormat=dd MMM yyyy HH:mm:ss, dateTimeValue=23 Apr 2017 11/42:35" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[15] dateTimeFormat=dd-MMM-yyyy HH:mm:ss, dateTimeValue=23-Apr::2017 11:42:35" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[16] dateTimeFormat=dd/MMM/yyyy HH:mm:ss, dateTimeValue=23/Apr/2017 11:42//35" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[17] dateTimeFormat=dd/MMM HH:mm:ss,SSS, dateTimeValue=23Apr 11:4235,173" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[18] dateTimeFormat=yyyy-MM-dd'T'HH:mm:ss.SSS'Z', dateTimeValue=2000-07-205:06:07.00" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[19] dateTimeFormat=yyyy-MM-dd HH:mm:ss ZZZZ, dateTimeValue=17-08-19 2:17:55 -0  00" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[20] dateTimeFormat=yyyy/MM/dd*HH:mm:ss, dateTimeValue=2010412*19:37:50" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[21] dateTimeFormat=yyyy MMM dd HH:mm:ss.SSS*zzz, dateTimeValue=2018  13 22:08:13.211*PDT" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="shouldReturnTrueIfValueIsZero()" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="shouldReturnTrueIfTheNumberIsInteger()" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsFloatingPointNumbersWihSymbols()" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[1] dateTimeFormat=MM-dd-yyyy, dateTimeValue=01-02-2018" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[2] dateTimeFormat=HH:mm:ss.SSSZ, dateTimeValue=13:03:15.454+0530" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[3] dateTimeFormat=MMMM dd, yy, dateTimeValue=February 17, 2009" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[4] dateTimeFormat=yy/MM/dd, dateTimeValue=2009/02/17" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[5] dateTimeFormat=dd/MM/yy, dateTimeValue=17/02/2009" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[6] dateTimeFormat=MMM dd, yyyy hh:mm:ss a, dateTimeValue=Dec 2, 2017 2:39:58 AM" classname="TypeEnumTest" time="0.002"/>
+  <testcase name="[7] dateTimeFormat=dd/MMM/yyyy:HH:mm:ss ZZZZ, dateTimeValue=19/Apr/2017:06:36:15 -0700" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[8] dateTimeFormat=MMM dd HH:mm:ss ZZZZ yyyy, dateTimeValue=Jan 21 18:20:11 +0000 2017" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[9] dateTimeFormat=MMM dd yyyy HH:mm:ss, dateTimeValue=Jun 09 2018 15:28:14" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[10] dateTimeFormat=MM/dd/yyyy hh:mm:ss a, dateTimeValue=9/28/2011 2:23:15 PM" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[11] dateTimeFormat=MM/dd/yyyy hh:mm:ss a, dateTimeValue=9/28/2011 2:23:15 PM" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[12] dateTimeFormat=MM/dd/yyyy hh:mm:ss a:SSS, dateTimeValue=8/5/2011 3:31:18 AM:234" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[13] dateTimeFormat=MMdd_HH:mm:ss.SSS, dateTimeValue=0423_11:42:35.883" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[14] dateTimeFormat=MMdd_HH:mm:ss, dateTimeValue=0423_11:42:35" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[15] dateTimeFormat=dd MMM yyyy HH:mm:ss*SSS, dateTimeValue=23 Apr 2017 10:32:35*311" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[16] dateTimeFormat=dd MMM yyyy HH:mm:ss, dateTimeValue=23 Apr 2017 11:42:35" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[17] dateTimeFormat=dd-MMM-yyyy HH:mm:ss, dateTimeValue=23-Apr-2017 11:42:35" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[18] dateTimeFormat=dd-MMM-yyyy HH:mm:ss, dateTimeValue=23-Apr-2017 11:42:35" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[19] dateTimeFormat=dd/MMM/yyyy HH:mm:ss, dateTimeValue=23/Apr/2017 11:42:35" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[20] dateTimeFormat=dd/MMM/yyyy HH:mm:ss, dateTimeValue=23/Apr/2017 11:42:35" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[21] dateTimeFormat=dd/MMM HH:mm:ss,SSS, dateTimeValue=23/Apr 11:42:35,173" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[22] dateTimeFormat=yyyy-MM-dd'T'HH:mm:ss.SSS'Z', dateTimeValue=2000-07-21T05:06:07.001Z" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[23] dateTimeFormat=yyyy-MM-dd HH:mm:ss ZZZZ, dateTimeValue=2017-08-19 12:17:55 -0400" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[24] dateTimeFormat=yyyy-MM-dd HH:mm:ss,SSS, dateTimeValue=2017-06-26 02:31:29,573" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[25] dateTimeFormat=yyyy/MM/dd*HH:mm:ss, dateTimeValue=2017/04/12*19:37:50" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[26] dateTimeFormat=yyyy MMM dd HH:mm:ss.SSS*zzz, dateTimeValue=2018 Apr 13 22:08:13.211*PDT" classname="TypeEnumTest" time="0.088"/>
+  <testcase name="[27] dateTimeFormat=yyyy-MM-dd'T'HH:mm:ss, dateTimeValue=2000-07-21T05:06:07" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[1] value=@" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[2] value=shikha.reddy@" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[3] value=@my-gmail.com" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[1] value=shikhareddy@gmail.com" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[2] value=shikha.reddy@gmail.com" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[3] value=shikhareddy123@my-gmail.com" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[4] value=shikha_reddy@gmail.com" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsFloatingPointNumberWithSucceeDingZeroes()" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsFloatingPointNumbersWihNegativeNumbers()" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[1] dateFormat=MM-dd-yyyy, dateTimeValue=01/02/2018" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[2] dateFormat=dd-MM-yyy, dateTimeValue=31/ 01-2012" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[3] dateFormat=dd/MM/yyyy, dateTimeValue=17-02-09" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[4] dateFormat=yyyy/MM/dd, dateTimeValue=2009/017" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[5] dateFormat=M/d/yy, dateTimeValue=2 7/12" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[6] dateFormat=d/M/yyyy, dateTimeValue=17/2:2009" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[7] dateFormat=yyyy//d, dateTimeValue=2009/2/17" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[8] dateFormat=MMddyyyy, dateTimeValue=02:17/09" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[9] dateFormat=ddMMyyyy, dateTimeValue=170 2009" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[10] dateFormat=dd MMM yyyy, dateTimeValue=0 2 Jan 2018" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsFloatingPointNumber()" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[1] dateFormat=hh:mm/ss, dateTimeValue=06:07:59" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[2] dateFormat=HH--mm:ss zzz, dateTimeValue=18:07:59 IST" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[3] dateFormat=HH::mm:ss.SSSZ, dateTimeValue=13:03:15.454+0530" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[4] dateFormat=HH:mm:ss.SSSZ, dateTimeValue=10:35:49.278'Z'" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsFloatingPointNumberWithSucceeDingZeroes1()" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[1] dateFormat=MM-dd-yyyy, dateTimeValue=01-02-2018" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[2] dateFormat=dd-MM-yyyy, dateTimeValue=31-01-2012" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[3] dateFormat=yyyy-MM-dd, dateTimeValue=2012-02-15" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[4] dateFormat=dd/MM/yyyy, dateTimeValue=17/02/09" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[5] dateFormat=yyyy/MM/dd, dateTimeValue=2009/ 2/17" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[6] dateFormat=M/d/yyy, dateTimeValue=2/7/12" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[7] dateFormat=d/M/yyyy, dateTimeValue=17/2/2009" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[8] dateFormat=yyyy/M/d, dateTimeValue=2009/2/17" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[9] dateFormat=MMddYy, dateTimeValue=02172009" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[10] dateFormat=ddMMyYYy, dateTimeValue=17022009" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[11] dateFormat=dd MMM yyyy, dateTimeValue=02 Jan 18" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsAlphabetic()" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[1] dateFormat=hh:mm:ss, dateTimeValue=06:07:59" classname="TypeEnumTest" time="0.001"/>
+  <testcase name="[2] dateFormat=HH:mm:ss zzz, dateTimeValue=18:07:59 IST" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="[3] dateFormat=HH:mm:ss.SSSZ, dateTimeValue=13:03:15.454+0530" classname="TypeEnumTest" time="0.0"/>
+  <testcase name="shouldBeAbleToCheckIfValueIsFloatingPointNumbersWihCharacters()" classname="TypeEnumTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
