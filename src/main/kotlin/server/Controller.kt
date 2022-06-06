@@ -45,6 +45,7 @@ class GreetingController {
 
     @GetMapping("/main.css")
     fun getCSS() :String {
+
         return homePage.getResponse("/main.css")
     }
 //
