@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.NullValidationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:27:06" hostname="Utkashs-MacBook-Pro.local" time="0.003">
+<testsuite name="validation.NullValidationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:32:21" hostname="Utkashs-MacBook-Pro.local" time="0.003">
   <properties/>
   <testcase name="shouldCheckIfNullValuesInMultipleFieldsAreAllowed()" classname="validation.NullValidationTest" time="0.0"/>
   <testcase name="shouldCheckIfNullValuesInMultipleFieldsAreNotAllowed()" classname="validation.NullValidationTest" time="0.0"/>

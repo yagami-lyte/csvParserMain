@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="routeHandler.ResponseHeaderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:27:06" hostname="Utkashs-MacBook-Pro.local" time="0.0">
+<testsuite name="routeHandler.ResponseHeaderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:32:21" hostname="Utkashs-MacBook-Pro.local" time="0.0">
   <properties/>
   <testcase name="shouldBeAbleToGetResponseHeader()" classname="routeHandler.ResponseHeaderTest" time="0.0"/>
   <system-out><![CDATA[HTTP/1.1 200 Ok

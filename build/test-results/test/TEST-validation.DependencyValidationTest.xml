@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="validation.DependencyValidationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:27:06" hostname="Utkashs-MacBook-Pro.local" time="0.007">
+<testsuite name="validation.DependencyValidationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-06-06T07:32:21" hostname="Utkashs-MacBook-Pro.local" time="0.006">
   <properties/>
-  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.DependencyValidationTest" time="0.005"/>
+  <testcase name="shouldReturnJsonArrayWithNoErrors()" classname="validation.DependencyValidationTest" time="0.004"/>
   <testcase name="shouldReturnJsonArrayWithMultipleErrors()" classname="validation.DependencyValidationTest" time="0.001"/>
   <testcase name="shouldPerformDependencyCheck()" classname="validation.DependencyValidationTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
