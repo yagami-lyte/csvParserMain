@@ -1,41 +1,40 @@
 stages:
-  # - build
-  # - test
-  - deploy
-# build:
-#   stage: build
-#   image: gradle:jdk11
-#   script:
-#     - gradle --no-daemon build
-#   artifacts:
-#     paths:
-#       - build/distributions
-#     expire_in: 1 day
-#     when: always
-
-# junit-test:
-#   stage: test
-#   image: gradle:jdk11
-#   dependencies: []
-#   script:
-#     - gradle test
-#   timeout: 5m
-
+ - deploy
+ - build
+ - test
 heroku:
  stage: deploy
  only:
- - Deploy
+  - Deploy2
  script:
- - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/csv-parser-validator.git
- - git push -f heroku Deploy
+  - git remote rm heroku
+  - git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/csv-parser-srijin.git
+  - git push -f heroku Deploy2
 
-# cypress-test:
-#   stage: test
-#   image: registry.gitlab.com/sahajsoft/gurukul2022/csv-parser-srijan:latestSrigin2
-#   dependencies:
-#     - build
-#   script:
-#     - unzip -q build/distributions/csv-parser-srijan-1.0-SNAPSHOT.zip -d build/distributions
-#     - sh build/distributions/csv-parser-srijan-1.0-SNAPSHOT/bin/csv-parser-srijan &
-#     - npm install --save-dev cypress-file-upload 
-#     - npx cypress run
+build:
+ stage: build
+ image: gradle:jdk11
+ script:
+  - gradle --no-daemon build
+ artifacts:
+  paths:
+   - build/distributions
+  expire_in: 1 day
+  when: always
+junit-test:
+ stage: test
+ image: gradle:jdk11
+ dependencies: []
+ script:
+  - gradle test
+ timeout: 5m
+cypress-test:
+ stage: test
+ image: registry.gitlab.com/sahajsoft/gurukul2022/csv-parser-srijan:latestSrigin2
+ dependencies:
+  - build
+ script:
+  - unzip -q build/distributions/csv-parser-srijan-1.0-SNAPSHOT.zip -d build/distributions
+  - sh build/distributions/csv-parser-srijan-1.0-SNAPSHOT/bin/csv-parser-srijan &
+  - npm install --save-dev cypress-file-upload
+  - npx cypress run
