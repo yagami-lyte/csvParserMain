@@ -103,7 +103,7 @@
 
 
 9        <form onsubmit="return mySubmitFunction(event)">
-            <div id="card-2">
+4            <div id="card-2" style="display:none;">
 
             </div>
         </form>
@@ -1427,9 +1427,8 @@ marquee {
 7        var field = `${lines[j]}`.replaceAll('"', '');
 )        row.setAttribute("class", "row")
 .        row.setAttribute("id", `row${field}`)
-        row.innerHTML = `
 
-	        
+        row.innerHTML = `
 %        <div id="addConfig${field}">
              <div id = "fields">
 
@@ -1634,7 +1633,13 @@ marquee {
                   </div>
                   </div>
                  `
-;        document.getElementById("card-2").appendChild(row)
+5        var card = document.getElementById("card-2")
+,        console.log(card.childNodes.length)
+J        if(card.childNodes.length === 2 || card.childNodes.length === 1){
+
+?            document.getElementById("card-2").appendChild(row)
+
+        }
     }
 
 .    var name = document.createElement('div');

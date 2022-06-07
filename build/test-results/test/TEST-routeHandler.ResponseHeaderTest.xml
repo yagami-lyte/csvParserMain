@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="routeHandler.ResponseHeaderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-06T12:31:19" hostname="Utkashs-MacBook-Pro.local" time="0.001">
+<testsuite name="routeHandler.ResponseHeaderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-07T06:18:48" hostname="Utkashs-MacBook-Pro.local" time="0.013">
   <properties/>
-  <testcase name="shouldBeAbleToGetResponseHeader()" classname="routeHandler.ResponseHeaderTest" time="0.001"/>
+  <testcase name="shouldBeAbleToGetResponseHeader()" classname="routeHandler.ResponseHeaderTest" time="0.013"/>
   <system-out><![CDATA[HTTP/1.1 200 Ok
 
 ]]></system-out>

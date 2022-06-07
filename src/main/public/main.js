@@ -195,9 +195,8 @@ function showColFields(lines) {
         var field = `${lines[j]}`.replaceAll('"', '');
         row.setAttribute("class", "row")
         row.setAttribute("id", `row${field}`)
-        row.innerHTML = `
 
-        
+        row.innerHTML = `
         <div id="addConfig${field}">
             <div id = "fields">
 
@@ -401,7 +400,12 @@ function showColFields(lines) {
                   </div>
                   </div>
                  `
-        document.getElementById("card-2").appendChild(row)
+        var card = document.getElementById("card-2")
+        console.log(card.childNodes.length)
+        if(card.childNodes.length === 2 || card.childNodes.length === 1){
+
+            document.getElementById("card-2").appendChild(row)
+        }
     }
 
     var name = document.createElement('div');

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="routeHandler.postRouteHandler.postResponse.PageNotFoundResponseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-06T12:31:19" hostname="Utkashs-MacBook-Pro.local" time="0.001">
+<testsuite name="routeHandler.postRouteHandler.postResponse.PageNotFoundResponseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-06-07T06:18:52" hostname="Utkashs-MacBook-Pro.local" time="0.012">
   <properties/>
-  <testcase name="shouldReturn400BadRequest()" classname="routeHandler.postRouteHandler.postResponse.PageNotFoundResponseTest" time="0.001"/>
+  <testcase name="shouldReturn400BadRequest()" classname="routeHandler.postRouteHandler.postResponse.PageNotFoundResponseTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
